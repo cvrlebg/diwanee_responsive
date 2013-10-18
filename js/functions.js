@@ -35,7 +35,7 @@ var brand_menu_style = function(){
     if(window_width < '640'){
         $.each($('#brands_menu li'), function(key, value){
             ul_width += $(this).width();  
-            console.log('key '+key+' width '+$(this).width());
+            //console.log('key '+key+' width '+$(this).width());
         });
         
         //console.log(event.srcElement);
@@ -49,7 +49,7 @@ var brand_menu_style = function(){
         }
         
         
-        console.log('ul_width '+ul_width);
+        //console.log('ul_width '+ul_width);
 
         $('#brands_menu').css('width', ul_width);
 
