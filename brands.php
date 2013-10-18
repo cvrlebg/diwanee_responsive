@@ -33,13 +33,13 @@
 
         <div id='main_header'></div>
             <header id="header_container">
-                <h1><a href="/responsive/" title='Diwanee Corp'><img src="/responsive/img/bpdiwanee_logo.jpg" alt="bpdiwanee_logo.jpg" /></a></h1>
+                <h1><a href="/responsive_git/" title='Diwanee Corp'><img src="/responsive_git/img/bpdiwanee_logo.jpg" alt="bpdiwanee_logo.jpg" /></a></h1>
                 <?php include_once 'include/menu.php';?>
                 
                 <ul id="slider">
-                    <li><a href=""><img src="/responsive/img/yasmina (2)_0.jpg" alt="yasmina (2)_0.jpg" /></a></li>
-                    <li><a href=""><img src="/responsive/img/for-developement-3a2ilati_0.jpg" alt="for-developement-3a2ilati_0.jpg" /></a></li>
-                    <li><a href=""><img src="/responsive/img/for-developement-wikeez_0.jpg" alt="for-developement-wikeez_0" /></a></li>
+                    <li><a href=""><img src="/responsive_git/img/yasmina (2)_0.jpg" alt="yasmina (2)_0.jpg" /></a></li>
+                    <li><a href=""><img src="/responsive_git/img/for-developement-3a2ilati_0.jpg" alt="for-developement-3a2ilati_0.jpg" /></a></li>
+                    <li><a href=""><img src="/responsive_git/img/for-developement-wikeez_0.jpg" alt="for-developement-wikeez_0" /></a></li>
                 </ul>
                 
                 <div id='empty_field'></div>
@@ -52,7 +52,7 @@
             
             <section id="brands_section">
                 <div id="breadcrumbs">
-                    <a href="/responsive/" class='red_link'>Home</a> > <span>Brands</span>
+                    <a href="/responsive_git/" class='red_link'>Home</a> > <span>Brands</span>
                     
                 </div>
                 
@@ -64,7 +64,7 @@
                         <h2><a href="">Yasmina.com</a></h2>
                     </header>
                     <div class="brand_img">
-                        <a href=""><img src="/responsive/img/Yasmina.jpg" alt="Yasmina.jpg" width="210" height="200"/></a>
+                        <a href=""><img src="/responsive_git/img/Yasmina.jpg" alt="Yasmina.jpg" width="210" height="200"/></a>
                     </div>
                     
                     <p>Yasmina is the portal through which today’s Arab woman will find self expression, content which matches her needs and a true understanding of…</p>
@@ -76,7 +76,7 @@
                         <h2><a href="">3a2ilati.com</a></h2>
                     </header>
                     <div class="brand_img">
-                        <a href=""><img src="/responsive/img/3a2ilati.jpg" alt="3a2ilati.jpg" width="210" height="200"/></a>
+                        <a href=""><img src="/responsive_git/img/3a2ilati.jpg" alt="3a2ilati.jpg" width="210" height="200"/></a>
                     </div>
                     
                     <p>Yasmina is the portal through which today’s Arab woman will find self expression, content which matches her needs and a true understanding of…</p>
@@ -88,7 +88,7 @@
                         <h2><a href="">Wikeez.Yasmina.com</a></h2>
                     </header>
                     <div class="brand_img">
-                        <a href=""><img src="/responsive/img/Wikeez.jpg" alt="Wikeez.jpg" width="210" height="200"/></a>
+                        <a href=""><img src="/responsive_git/img/Wikeez.jpg" alt="Wikeez.jpg" width="210" height="200"/></a>
                     </div>
                     
                     <p>Yasmina is the portal through which today’s Arab woman will find self expression, content which matches her needs and a true understanding of…</p>
@@ -100,7 +100,7 @@
                         <h2><a href="">Mooda</a></h2>
                     </header>
                     <div class="brand_img">
-                        <a href=""><img src="/responsive/img/picture_0.jpg" alt="Yasmina.jpg" width="210" height="200"/></a>
+                        <a href=""><img src="/responsive_git/img/picture_0.jpg" alt="Yasmina.jpg" width="210" height="200"/></a>
                     </div>
                     
                     <p>Yasmina is the portal through which today’s Arab woman will find self expression, content which matches her needs and a true understanding of…</p>
@@ -112,7 +112,7 @@
                         <h2><a href="">Wayyana</a></h2>
                     </header>
                     <div class="brand_img">
-                        <a href=""><img src="/responsive/img/wayyana-logo.jpg" alt="wayyana-logo.jpg" width="210" height="200"/></a>
+                        <a href=""><img src="/responsive_git/img/wayyana-logo.jpg" alt="wayyana-logo.jpg" width="210" height="200"/></a>
                     </div>
                     
                     <p>Yasmina is the portal through which today’s Arab woman will find self expression, content which matches her needs and a true understanding of…</p>

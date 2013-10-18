@@ -21,12 +21,12 @@
 
         <div id='main_header'></div>
             <header id="header_container">
-                <h1><a href="/responsive/" title='Diwanee Corp'><img src="/responsive/img/bpdiwanee_logo.jpg" alt="bpdiwanee_logo.jpg" /></a></h1>
+                <h1><a href="/responsive_git/" title='Diwanee Corp'><img src="/responsive_git/img/bpdiwanee_logo.jpg" alt="bpdiwanee_logo.jpg" /></a></h1>
                 <?php include_once 'include/menu.php';?>
                 
                 
                 <div id="banner">
-                    <img src="/responsive/img/yasmina (2)_0.jpg" alt="yasmina (2)_0.jpg" />
+                    <img src="/responsive_git/img/yasmina (2)_0.jpg" alt="yasmina (2)_0.jpg" />
                 </div>
                 
                 <div id='empty_field'></div>
@@ -38,7 +38,7 @@
             
             <section id="yasmina_section">
                 <div id="breadcrumbs">
-                    <a href="/responsive/" class='red_link'>Home</a> > <a href="/responsive/brands.php" class='red_link'>Brands</a> > <span>Yasminacom</span>
+                    <a href="/responsive_git/" class='red_link'>Home</a> > <a href="/responsive_git/brands.php" class='red_link'>Brands</a> > <span>Yasminacom</span>
                     
                 </div>
                 
@@ -57,12 +57,12 @@
                     <p class='lines' style='margin-bottom: 30px;'>Our mission is to connect, inspire & entertain through relevant premium content created for today's sophisticated Arab woman. </p>
                     
                     <div class="brand_img">
-                        <img src="/responsive/img/23930.jpg" alt="23930.jpg" width="212" height="148"/>
-                        <img src="/responsive/img/27044.jpg" alt="27044.jpg" width="212" height="148"/>
-                        <img src="/responsive/img/27052.jpg" alt="27052.jpg" width="212" height="148"/>
-                        <img src="/responsive/img/27063.jpg" alt="27063.jpg" width="212" height="148"/>
-                        <img src="/responsive/img/26375_0.jpg" alt="26375_0.jpg" width="212" height="148"/>
-                        <img src="/responsive/img/photo section.PNG" alt="photo section.PNG" width="212" height="148"/>
+                        <img src="/responsive_git/img/23930.jpg" alt="23930.jpg" width="212" height="148"/>
+                        <img src="/responsive_git/img/27044.jpg" alt="27044.jpg" width="212" height="148"/>
+                        <img src="/responsive_git/img/27052.jpg" alt="27052.jpg" width="212" height="148"/>
+                        <img src="/responsive_git/img/27063.jpg" alt="27063.jpg" width="212" height="148"/>
+                        <img src="/responsive_git/img/26375_0.jpg" alt="26375_0.jpg" width="212" height="148"/>
+                        <img src="/responsive_git/img/photo section.PNG" alt="photo section.PNG" width="212" height="148"/>
                     </div>
                     
                     <div class="second_part">

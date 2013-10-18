@@ -34,13 +34,13 @@
         <div id='main_header'></div>
         
             <header id="header_container">
-                <h1><a href="/responsive/" title='Diwanee Corp'><img src="/responsive/img/bpdiwanee_logo.jpg" alt="bpdiwanee_logo.jpg" /></a></h1>
+                <h1><a href="/responsive_git/" title='Diwanee Corp'><img src="/responsive_git/img/bpdiwanee_logo.jpg" alt="bpdiwanee_logo.jpg" /></a></h1>
                 <?php include_once 'include/menu.php'; ?>
                 
                 <ul id="slider">
-                    <li><a href=""><img src="/responsive/img/yasmina (2)_0.jpg" alt="yasmina (2)_0.jpg" /></a></li>
-                    <li><a href=""><img src="/responsive/img/for-developement-3a2ilati_0.jpg" alt="for-developement-3a2ilati_0.jpg" /></a></li>
-                    <li><a href=""><img src="/responsive/img/for-developement-wikeez_0.jpg" alt="for-developement-wikeez_0" /></a></li>
+                    <li><a href=""><img src="/responsive_git/img/yasmina (2)_0.jpg" alt="yasmina (2)_0.jpg" /></a></li>
+                    <li><a href=""><img src="/responsive_git/img/for-developement-3a2ilati_0.jpg" alt="for-developement-3a2ilati_0.jpg" /></a></li>
+                    <li><a href=""><img src="/responsive_git/img/for-developement-wikeez_0.jpg" alt="for-developement-wikeez_0" /></a></li>
                 </ul>
                 
                 <div id='empty_field'></div>
@@ -50,13 +50,13 @@
         <div id='main_container'>
             <section id="latest_campaigns">
                 <div class="section-head">
-                    <img src="/responsive/img/latest-campaigns.png" alt="latest-campaigns.png" />
+                    <img src="/responsive_git/img/latest-campaigns.png" alt="latest-campaigns.png" />
                     <h2>LATEST CAMPAIGNS</h2>
                 </div>
                 
                 <article>
                     <div class="main_img">
-                        <a href=""><img src="/responsive/img/Bourjois.png" alt="Bourjois.png" /></a>
+                        <a href=""><img src="/responsive_git/img/Bourjois.png" alt="Bourjois.png" /></a>
                     </div>
                     
                     <div class='short_info'>
@@ -71,7 +71,7 @@
 
                 <article>
                     <div class="main_img">
-                        <a href=""><img src="/responsive/img/3a2ilati.com and GMC Launch New GCC Webpage Dedicated to Car Safety for Children_0.png" alt="3a2ilati.com and GMC Launch New GCC Webpage Dedicated to Car Safety for Children_0.png" width="166" height="105"/></a>
+                        <a href=""><img src="/responsive_git/img/3a2ilati.com and GMC Launch New GCC Webpage Dedicated to Car Safety for Children_0.png" alt="3a2ilati.com and GMC Launch New GCC Webpage Dedicated to Car Safety for Children_0.png" width="166" height="105"/></a>
                     </div>
                     
                     <div class='short_info'>
@@ -85,7 +85,7 @@
                 
                 <article>
                     <div class="main_img">
-                        <img src="/responsive/img/Capture d’écran 2012-12-04 à 14.19.58_1.png" alt="Capture d’écran 2012-12-04 à 14.19.58_1.png" width="166" height="105"/>
+                        <img src="/responsive_git/img/Capture d’écran 2012-12-04 à 14.19.58_1.png" alt="Capture d’écran 2012-12-04 à 14.19.58_1.png" width="166" height="105"/>
                     </div>
                     
                     <div class='short_info'>
@@ -99,7 +99,7 @@
                 
                 <article>
                     <div class="main_img">
-                        <img src="/responsive/img/1.jpg" alt="1.jpg" width="166" height="105"/>
+                        <img src="/responsive_git/img/1.jpg" alt="1.jpg" width="166" height="105"/>
                     </div>
                     
                     <div class='short_info'>
@@ -113,7 +113,7 @@
                 
                 <article>
                     <div class="main_img">
-                        <img src="/responsive/img/carefree-skinning_option2_0.jpg" alt="carefree-skinning_option2_0.jpg" width="166" height="105"/>
+                        <img src="/responsive_git/img/carefree-skinning_option2_0.jpg" alt="carefree-skinning_option2_0.jpg" width="166" height="105"/>
                     </div>
                     <div class='short_info'>
                         <header>
@@ -134,7 +134,7 @@
             
             <section id="news">
                 <div class="section-head">
-                    <img src="/responsive/img/in-the-news.png" alt="in-the-news.png" />
+                    <img src="/responsive_git/img/in-the-news.png" alt="in-the-news.png" />
                     <h2>IN THE NEWS</h2>
                 </div>
                 
@@ -212,7 +212,7 @@
             
             <section id="twitter_timeline">
                  <div class="section-head">
-                    <img src="/responsive/img/our-latest-tweets.png" alt="our-latest-tweets.png" />
+                    <img src="/responsive_git/img/our-latest-tweets.png" alt="our-latest-tweets.png" />
                     <h2>Our latest tweets</h2>
                 </div>
                 
