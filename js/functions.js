@@ -23,7 +23,7 @@ $(function(){
 });
 
 
-var brand_menu_style = function(){
+var brand_menu_style = function(e){
     //brand menu slide
     var ul_width = 0;
     var diff; 
@@ -34,25 +34,20 @@ var brand_menu_style = function(){
     
     if(window_width < '640'){
         $.each($('#brands_menu li'), function(key, value){
-            ul_width += $(this).width();  
-            //console.log('key '+key+' width '+$(this).width());
+            ul_width += $(this).outerWidth(true);  
+            console.log('key '+key+' width '+$(this).outerWidth(true));
         });
         
-        //console.log(event.srcElement);
+        //console.log('ul_widht '+ul_width);
         
         var parent = $('#brands_menu').parent().width();
-        
-        if(event.srcElement != window){
-           ul_width = ul_width - 145;
-        } else{
-            ul_width = ul_width + 7;
-        }
-        
+              
         
         //console.log('ul_width '+ul_width);
 
         $('#brands_menu').css('width', ul_width);
-
+        
+        $("#arrow_more").unbind('click');
         $('#arrow_more').bind('click', function(e){
 
             e.preventDefault();
