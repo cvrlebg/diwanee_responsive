@@ -4,7 +4,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Diwanee Brands | Diwanee Corp</title>
-        <link rel="stylesheet/less" href="style/style.less" />
+        <!--<link rel="stylesheet/less" href="style/style.less" />-->
+        <link rel="stylesheet" href="stylesheets/style.css" />
         <link rel="stylesheet/less" href="js/anything-slider/css/LESS/anythingslider.less" />
         <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="img/bpdiwanee_favicon.jpg" type="image/x-icon" />

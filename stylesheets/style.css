@@ -216,10 +216,10 @@ body#yasmina_body a#yasmina_link {
 
 /* line 235, ../sass/style.scss */
 #main_container {
-  width: 470px;
+  width: 950px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
-  float: left;
   position: relative;
   background-color: #fff;
   padding: 15px 15px 28px 15px;
@@ -403,10 +403,10 @@ footer {
 }
 /* line 421, ../sass/style.scss */
 #brands #brands_container {
-  width: 470px;
+  width: 950px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
-  float: left;
   padding: 15px;
   overflow: hidden;
 }
@@ -427,10 +427,10 @@ footer {
 }
 /* line 441, ../sass/style.scss */
 #copyright #copyright_container {
-  width: 470px;
+  width: 950px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
-  float: left;
 }
 /* line 449, ../sass/style.scss */
 #copyright #copyright_container #rights {
@@ -463,10 +463,10 @@ footer {
 }
 /* line 473, ../sass/style.scss */
 #links #links_container {
-  width: 470px;
+  width: 950px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
-  float: left;
   padding: 15px;
   font-family: 'Abel',sans-serif;
 }

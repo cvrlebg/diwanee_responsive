@@ -233,7 +233,7 @@ $footer-container-width: 950px;
 
 //main container
 #main_container{
-    @include sections;
+    @include container;
     position: relative;
     background-color: #fff;
     padding: 15px 15px 28px 15px;
@@ -419,7 +419,7 @@ footer{
     @include footer_parts($height: 144px, $background-color: #fff,$color: #222);
 
     #brands_container{
-        @include sections;
+        @include container;
         padding: 15px;
         overflow: hidden;
 
@@ -439,7 +439,7 @@ footer{
     
 
     #copyright_container{
-        @include sections;
+        @include container;
 
         @mixin footer_parts($top: 10px){
             position: relative;
@@ -471,7 +471,7 @@ footer{
     border-top: 6px solid #8D120D;
     
     #links_container{
-        @include sections;
+        @include container;
         padding: 15px;
         font-family: 'Abel',sans-serif;
 
