@@ -1,0 +1,1143 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 20, ../sass/style.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 30, ../sass/style.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 33, ../sass/style.scss */
+body {
+  line-height: 1.5;
+  background-color: #F3F3F3;
+  color: #222;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
+/* line 41, ../sass/style.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 44, ../sass/style.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 48, ../sass/style.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 52, ../sass/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 56, ../sass/style.scss */
+a {
+  text-decoration: none;
+  color: #222;
+}
+/* line 61, ../sass/style.scss */
+a:active, a:focus, a:hover {
+  text-decoration: none;
+}
+
+/* line 66, ../sass/style.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 70, ../sass/style.scss */
+body#home li#home_link a {
+  background: url("../img/home_sprite.png") -1px -24px no-repeat !important;
+  border-bottom: 1px solid #fff;
+}
+
+/* line 75, ../sass/style.scss */
+body#brands_body a#brands_link, body#yasmina_body a#brands_link {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* line 80, ../sass/style.scss */
+body#yasmina_body a#yasmina_link {
+  color: #fff;
+}
+
+/* line 97, ../sass/style.scss */
+.content_text {
+  /*font-size: 12px;*/
+}
+
+/* line 124, ../sass/style.scss */
+#main_header {
+  background-color: #222;
+  width: 100%;
+  height: 645px;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* line 133, ../sass/style.scss */
+#header_container {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+/* line 136, ../sass/style.scss */
+#header_container h1 {
+  padding-top: 28px;
+}
+
+/* line 141, ../sass/style.scss */
+#main_nav {
+  padding-top: 15px;
+  margin-bottom: 1px;
+}
+/* line 145, ../sass/style.scss */
+#main_nav ul {
+  list-style: none;
+}
+/* line 148, ../sass/style.scss */
+#main_nav ul li {
+  display: inline-block;
+  height: 30px;
+  padding: 0 13px 0 13px;
+  margin: 0 0 0 0.4em;
+  position: relative;
+}
+/* line 155, ../sass/style.scss */
+#main_nav ul li:hover {
+  background-color: #363636;
+}
+/* line 159, ../sass/style.scss */
+#main_nav ul li:hover ul.sub_menu {
+  display: block;
+}
+/* line 163, ../sass/style.scss */
+#main_nav ul li ul.sub_menu {
+  display: none;
+  background-color: #363636;
+  position: absolute;
+  list-style: none;
+  width: 200px;
+  left: 0px;
+  top: 30px;
+  z-index: 999;
+}
+/* line 173, ../sass/style.scss */
+#main_nav ul li ul.sub_menu li {
+  display: block;
+  border-bottom: 1px solid #444;
+  padding: 0 0 5px 0;
+  margin: 0px 16px 0 16px;
+}
+/* line 179, ../sass/style.scss */
+#main_nav ul li ul.sub_menu li:last-child {
+  border: none;
+}
+/* line 183, ../sass/style.scss */
+#main_nav ul li ul.sub_menu li a {
+  text-transform: none;
+}
+/* line 192, ../sass/style.scss */
+#main_nav ul #home_link {
+  margin: 0 4px 0 0;
+  padding: 0;
+  background: url("../img/home_sprite.png") -1px 2px no-repeat;
+}
+/* line 197, ../sass/style.scss */
+#main_nav ul #home_link a:hover {
+  background: url("../img/home_sprite.png") -1px -25px no-repeat;
+}
+/* line 202, ../sass/style.scss */
+#main_nav ul a {
+  font-size: 18px;
+  color: #b1b1b1;
+  text-decoration: none;
+  height: 29px;
+  line-height: 29px;
+  text-transform: uppercase;
+  font-family: "Abel", sans-serif;
+}
+/* line 211, ../sass/style.scss */
+#main_nav ul a:hover {
+  color: #fff;
+}
+
+/* line 220, ../sass/style.scss */
+#slider {
+  width: 1262px;
+  height: 522px;
+  margin: 0 auto;
+}
+/* line 225, ../sass/style.scss */
+#slider img {
+  height: 522px;
+}
+
+/* line 230, ../sass/style.scss */
+#empty_field {
+  height: 312px;
+}
+
+/* line 235, ../sass/style.scss */
+#main_container {
+  width: 470px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  background-color: #fff;
+  padding: 15px 15px 28px 15px;
+  position: relative;
+  background-color: #FFF;
+  z-index: 50;
+  overflow: hidden;
+  background: url("../img/footer-top-gradient.png") bottom left repeat-x white;
+}
+
+/* line 247, ../sass/style.scss */
+.section-head {
+  font-family: "Abel", sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+/* line 252, ../sass/style.scss */
+.section-head img {
+  float: left;
+  margin-right: 10px;
+}
+/* line 257, ../sass/style.scss */
+.section-head h2 {
+  line-height: 31px;
+  text-transform: uppercase;
+}
+
+/* line 264, ../sass/style.scss */
+#latest_campaigns {
+  width: 470px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+  height: 790px;
+}
+/* line 269, ../sass/style.scss */
+#latest_campaigns .short_info {
+  width: 270px;
+  position: relative;
+  float: left;
+}
+/* line 275, ../sass/style.scss */
+#latest_campaigns article {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+/* line 280, ../sass/style.scss */
+#latest_campaigns article h2 {
+  font-family: "Abel", sans-serif;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+/* line 285, ../sass/style.scss */
+#latest_campaigns article h2 a {
+  color: #222;
+  font-size: 18px;
+}
+/* line 289, ../sass/style.scss */
+#latest_campaigns article h2 a:hover {
+  text-decoration: underline;
+}
+/* line 295, ../sass/style.scss */
+#latest_campaigns article p {
+  height: 40px;
+  overflow: hidden;
+  font-size: inherit;
+}
+
+/* line 306, ../sass/style.scss */
+.red_link {
+  color: #CF1414;
+}
+/* line 309, ../sass/style.scss */
+.red_link:hover {
+  text-decoration: underline;
+}
+
+/* line 314, ../sass/style.scss */
+.section_footer {
+  height: 34px;
+  width: 100%;
+  background-color: #f2f2f2;
+  position: absolute;
+  bottom: 0px;
+}
+/* line 321, ../sass/style.scss */
+.section_footer span {
+  margin: 4px 4px 0 4px;
+  height: 26px;
+  width: 144px;
+  position: relative;
+  float: right;
+}
+/* line 328, ../sass/style.scss */
+.section_footer span a.the_button {
+  line-height: 26px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: #989697;
+  color: #FFF;
+  background: url("../img/button.gif") 0 -26px;
+}
+/* line 340, ../sass/style.scss */
+.section_footer span a.the_button:hover {
+  background: url("../img/button.gif") 0 0px;
+}
+
+/* line 351, ../sass/style.scss */
+.main_img {
+  width: 190px;
+  float: left;
+  text-align: center;
+}
+
+/* line 359, ../sass/style.scss */
+#news {
+  width: 470px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 18px;
+  line-height: 1.2;
+  height: 423px;
+}
+/* line 368, ../sass/style.scss */
+#news article:last-child {
+  border: none;
+}
+/* line 372, ../sass/style.scss */
+#news article h4 {
+  width: 370px;
+  height: 30px;
+  float: left;
+}
+/* line 378, ../sass/style.scss */
+#news article time {
+  color: gray;
+  float: right;
+}
+
+/* line 385, ../sass/style.scss */
+.news_twitter_article {
+  border-bottom: 1px solid #f0f0f0;
+  margin: 0 12px 0 14px;
+  padding: 6px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 394, ../sass/style.scss */
+#twitter_timeline {
+  width: 470px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  height: 349px;
+}
+/* line 399, ../sass/style.scss */
+#twitter_timeline .time {
+  color: gray;
+}
+
+/* line 405, ../sass/style.scss */
+footer {
+  position: relative;
+}
+
+/* line 418, ../sass/style.scss */
+#brands {
+  width: 100%;
+  height: 144px;
+  position: relative;
+  background-color: white;
+  color: #222222;
+}
+/* line 421, ../sass/style.scss */
+#brands #brands_container {
+  width: 470px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  padding: 15px;
+  overflow: hidden;
+}
+/* line 426, ../sass/style.scss */
+#brands #brands_container article {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 436, ../sass/style.scss */
+#copyright {
+  width: 100%;
+  height: 38px;
+  position: relative;
+  background-color: #222222;
+  color: #dddddd;
+  font-size: 11px;
+}
+/* line 441, ../sass/style.scss */
+#copyright #copyright_container {
+  width: 470px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+/* line 449, ../sass/style.scss */
+#copyright #copyright_container #rights {
+  position: relative;
+  top: 10px;
+  float: left;
+}
+/* line 454, ../sass/style.scss */
+#copyright #copyright_container #connect_with {
+  position: relative;
+  top: 10px;
+  float: right;
+  margin-right: 5px;
+}
+/* line 460, ../sass/style.scss */
+#copyright #copyright_container #social_buttons {
+  position: relative;
+  top: 5px;
+  float: right;
+}
+
+/* line 469, ../sass/style.scss */
+#links {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: #b22c2d;
+  color: white;
+  border-top: 6px solid #8D120D;
+}
+/* line 473, ../sass/style.scss */
+#links #links_container {
+  width: 470px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  padding: 15px;
+  font-family: 'Abel',sans-serif;
+}
+/* line 478, ../sass/style.scss */
+#links #links_container ul.footer_menu li {
+  display: block;
+  width: 118px;
+  float: left;
+  position: relative;
+}
+/* line 484, ../sass/style.scss */
+#links #links_container ul.footer_menu li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+/* line 489, ../sass/style.scss */
+#links #links_container ul.footer_menu li a:hover {
+  text-decoration: underline;
+}
+/* line 494, ../sass/style.scss */
+#links #links_container ul.footer_menu li .sub_menu {
+  overflow: hidden;
+}
+/* line 497, ../sass/style.scss */
+#links #links_container ul.footer_menu li .sub_menu li a {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+/* line 502, ../sass/style.scss */
+#links #links_container ul.footer_menu li .sub_menu li a:hover {
+  text-decoration: underline;
+}
+
+/* line 513, ../sass/style.scss */
+body#brands_body #brands_menu li a#brands_sublink, body#yasmina_body #brands_menu li a#yasmina_sublink {
+  background-color: #efefef;
+}
+
+/* line 517, ../sass/style.scss */
+aside {
+  width: 230px;
+  height: 100%;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+}
+/* line 524, ../sass/style.scss */
+aside ul#brands_menu {
+  border: 1px solid #efefef;
+}
+/* line 527, ../sass/style.scss */
+aside ul#brands_menu li {
+  border-bottom: 1px solid #efefef;
+}
+/* line 531, ../sass/style.scss */
+aside ul#brands_menu li:last-child {
+  border-bottom: none;
+}
+/* line 535, ../sass/style.scss */
+aside ul#brands_menu li a#brands_sublink {
+  text-transform: uppercase;
+}
+/* line 539, ../sass/style.scss */
+aside ul#brands_menu li a {
+  display: block;
+  width: 220px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: "Abel", sans-serif;
+  color: #222;
+  text-transform: capitalize;
+}
+/* line 550, ../sass/style.scss */
+aside ul#brands_menu li a:hover {
+  background-color: #efefef;
+}
+/* line 557, ../sass/style.scss */
+aside #arrow_more {
+  display: none;
+}
+
+/* line 577, ../sass/style.scss */
+#brands_section {
+  width: 710px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+/* line 580, ../sass/style.scss */
+#brands_section h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: "Abel", sans-serif;
+  margin-bottom: 25px;
+  line-height: 1;
+}
+/* line 584, ../sass/style.scss */
+#brands_section article {
+  height: 400px;
+  width: 230px;
+  float: left;
+  position: relative;
+  margin-right: 10px;
+}
+/* line 591, ../sass/style.scss */
+#brands_section article h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-family: "Abel", sans-serif;
+}
+/* line 596, ../sass/style.scss */
+#brands_section article h2 a {
+  color: #222;
+}
+/* line 599, ../sass/style.scss */
+#brands_section article h2 a:hover {
+  text-decoration: underline;
+}
+/* line 605, ../sass/style.scss */
+#brands_section article img {
+  padding: 10px;
+  background: #F3F3F3;
+  margin-bottom: 15px;
+  line-height: 1;
+  width: 210px;
+  height: 202px;
+}
+/* line 609, ../sass/style.scss */
+#brands_section article p {
+  margin-bottom: 5px;
+}
+
+/* line 615, ../sass/style.scss */
+#breadcrumbs {
+  position: relative;
+  top: 0px;
+  padding: 0 0 11px 3px;
+  line-height: 1;
+}
+
+/* line 627, ../sass/style.scss */
+body#yasmina_body {
+  /*height: 1617px;*/
+}
+
+/* line 631, ../sass/style.scss */
+#banner {
+  width: 1280px;
+  margin: 0 auto;
+  position: absolute;
+  left: -150px;
+}
+/* line 637, ../sass/style.scss */
+#banner img {
+  height: 522px;
+}
+
+/* line 642, ../sass/style.scss */
+#yasmina_section h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: "Abel", sans-serif;
+  margin-bottom: 25px;
+  line-height: 1;
+}
+
+/* line 646, ../sass/style.scss */
+#yasmina_section {
+  width: 710px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+/* line 650, ../sass/style.scss */
+#tabs {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  height: 20px;
+}
+/* line 655, ../sass/style.scss */
+#tabs a {
+  border: 1px solid #CCC;
+  padding: 4px 17px 4px 12px;
+  margin-right: -2px;
+  color: #666;
+  background-color: #eee;
+  line-height: 1;
+}
+
+/* line 665, ../sass/style.scss */
+.lines {
+  margin-bottom: 15px;
+}
+
+/* line 669, ../sass/style.scss */
+.small_line_height {
+  margin-bottom: 0px;
+}
+
+/* line 673, ../sass/style.scss */
+#overview {
+  width: 710px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+/* line 676, ../sass/style.scss */
+#overview img {
+  padding: 10px;
+  background: #F3F3F3;
+  margin-bottom: 15px;
+  line-height: 1;
+  width: 202px;
+  height: 138px;
+  margin: 5px;
+}
+/* line 681, ../sass/style.scss */
+#overview .second_part p {
+  margin-bottom: 0px;
+}
+
+/* line 686, ../sass/style.scss */
+.active {
+  border-bottom: 1px solid #fff !important;
+  background-color: #fff !important;
+  color: #222 !important;
+}
+
+@media only screen and (max-width: 640px) {
+  /* line 697, ../sass/style.scss */
+  body {
+    line-height: 1.5;
+    font-size: 22px;
+  }
+
+  /* line 702, ../sass/style.scss */
+  body#home li#home_link a {
+    background: url("../img/home_sprite.png") 7px -20px no-repeat !important;
+  }
+
+  /* line 710, ../sass/style.scss */
+  #header_container {
+    width: 630px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding-left: 10px;
+  }
+
+  /* line 715, ../sass/style.scss */
+  #main_nav {
+    padding-top: 15px;
+  }
+  /* line 718, ../sass/style.scss */
+  #main_nav ul {
+    list-style: none;
+  }
+  /* line 721, ../sass/style.scss */
+  #main_nav ul li {
+    display: inline-block;
+    height: 30px;
+    padding: 0 13px 0 13px;
+    margin: 0 0 0 0.4em;
+    position: relative;
+  }
+  /* line 728, ../sass/style.scss */
+  #main_nav ul li:hover {
+    background-color: #363636;
+  }
+  /* line 732, ../sass/style.scss */
+  #main_nav ul li:hover ul.sub_menu {
+    display: block;
+  }
+  /* line 736, ../sass/style.scss */
+  #main_nav ul li ul.sub_menu {
+    display: none;
+    background-color: #363636;
+    position: absolute;
+    list-style: none;
+    width: 230px;
+    left: 0px;
+    top: 30px;
+    z-index: 999;
+  }
+  /* line 746, ../sass/style.scss */
+  #main_nav ul li ul.sub_menu li {
+    display: block;
+    border-bottom: 1px solid #444;
+    padding: 0 0 5px 0;
+    margin: 0px 16px 5px 16px;
+  }
+  /* line 752, ../sass/style.scss */
+  #main_nav ul li ul.sub_menu li:last-child {
+    border: none;
+  }
+  /* line 756, ../sass/style.scss */
+  #main_nav ul li ul.sub_menu li a {
+    text-transform: none;
+  }
+  /* line 765, ../sass/style.scss */
+  #main_nav ul #home_link {
+    margin: 0 4px 0 0;
+    padding: 0;
+    background: url("../img/home_sprite.png") 7px 2px no-repeat;
+  }
+  /* line 770, ../sass/style.scss */
+  #main_nav ul #home_link a:hover {
+    background: url("../img/home_sprite.png") 7px -20px no-repeat;
+  }
+  /* line 775, ../sass/style.scss */
+  #main_nav ul a {
+    font-size: 28px;
+    color: #b1b1b1;
+    text-decoration: none;
+    height: 29px;
+    line-height: 29px;
+    text-transform: uppercase;
+    font-family: "Abel", sans-serif;
+  }
+  /* line 784, ../sass/style.scss */
+  #main_nav ul a:hover {
+    color: #fff;
+  }
+
+  /* line 792, ../sass/style.scss */
+  .anythingSlider {
+    left: -90px !important;
+  }
+  /* line 794, ../sass/style.scss */
+  .anythingSlider #slider img {
+    width: 810px;
+  }
+
+  /* line 799, ../sass/style.scss */
+  .anythingSlider-default .back {
+    left: 100px !important;
+  }
+
+  /* line 803, ../sass/style.scss */
+  .anythingSlider-default .forward {
+    right: 550px !important;
+  }
+
+  /* line 808, ../sass/style.scss */
+  #main_container {
+    width: 610px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 28px;
+  }
+
+  /* line 813, ../sass/style.scss */
+  .section-head {
+    font-size: 35px;
+  }
+
+  /* line 818, ../sass/style.scss */
+  .section_footer {
+    height: 65px;
+    line-height: 65px;
+    background-color: #eee;
+  }
+  /* line 823, ../sass/style.scss */
+  .section_footer span {
+    width: 245px;
+  }
+
+  /* line 828, ../sass/style.scss */
+  #latest_campaigns {
+    height: 590px;
+    width: 600px;
+    margin-bottom: 18px;
+  }
+  /* line 833, ../sass/style.scss */
+  #latest_campaigns article {
+    margin-bottom: 40px;
+  }
+  /* line 836, ../sass/style.scss */
+  #latest_campaigns article .short_info {
+    width: 320px;
+  }
+  /* line 840, ../sass/style.scss */
+  #latest_campaigns article img {
+    width: 255px;
+    height: 160px;
+  }
+  /* line 845, ../sass/style.scss */
+  #latest_campaigns article h2 a {
+    font-size: 30px;
+  }
+
+  /* line 851, ../sass/style.scss */
+  #news {
+    width: 600px;
+    height: 854px;
+  }
+  /* line 855, ../sass/style.scss */
+  #news article h4 {
+    height: 80px;
+  }
+  /* line 859, ../sass/style.scss */
+  #news time {
+    font-size: 18px;
+  }
+
+  /* line 864, ../sass/style.scss */
+  #twitter_timeline {
+    width: 600px;
+    height: 625px;
+  }
+
+  /* line 869, ../sass/style.scss */
+  .main_img {
+    width: 279px;
+  }
+
+  /* line 873, ../sass/style.scss */
+  footer {
+    widht: 640px;
+  }
+
+  /* line 877, ../sass/style.scss */
+  #brands {
+    height: 230px;
+  }
+  /* line 880, ../sass/style.scss */
+  #brands #brands_container {
+    width: 640px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 45px;
+  }
+  /* line 884, ../sass/style.scss */
+  #brands #brands_container .section-head {
+    margin-bottom: 45px;
+  }
+  /* line 888, ../sass/style.scss */
+  #brands #brands_container article {
+    margin-right: 80px;
+  }
+  /* line 891, ../sass/style.scss */
+  #brands #brands_container article:last-child {
+    margin-right: 10px;
+  }
+
+  /* line 900, ../sass/style.scss */
+  #copyright {
+    height: 75px;
+  }
+  /* line 903, ../sass/style.scss */
+  #copyright #copyright_container {
+    width: 640px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    font-size: 22px;
+    line-height: 73px;
+  }
+  /* line 908, ../sass/style.scss */
+  #copyright #copyright_container #rights {
+    display: none;
+  }
+  /* line 912, ../sass/style.scss */
+  #copyright #copyright_container #connect_with {
+    float: left;
+    padding-left: 10px;
+    top: 0px;
+    margin-left: 100px;
+  }
+  /* line 919, ../sass/style.scss */
+  #copyright #copyright_container #social_buttons {
+    float: right;
+    margin-right: 100px;
+    top: 9px;
+  }
+  /* line 924, ../sass/style.scss */
+  #copyright #copyright_container #social_buttons a {
+    margin-right: 20px;
+  }
+  /* line 927, ../sass/style.scss */
+  #copyright #copyright_container #social_buttons a img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* line 936, ../sass/style.scss */
+  #links {
+    height: 400px;
+  }
+  /* line 938, ../sass/style.scss */
+  #links #links_container {
+    width: 640px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  /* line 941, ../sass/style.scss */
+  #links #links_container ul.footer_menu li {
+    width: 160px;
+  }
+  /* line 944, ../sass/style.scss */
+  #links #links_container ul.footer_menu li a {
+    font-size: 30px;
+  }
+  /* line 948, ../sass/style.scss */
+  #links #links_container ul.footer_menu li ul.sub_menu {
+    margin-top: 25px;
+  }
+  /* line 951, ../sass/style.scss */
+  #links #links_container ul.footer_menu li ul.sub_menu li {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  /* line 955, ../sass/style.scss */
+  #links #links_container ul.footer_menu li ul.sub_menu li a {
+    font-size: 26px;
+    line-height: 0.1 !important;
+  }
+
+  /* line 970, ../sass/style.scss */
+  #brands_section {
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    top: 80px;
+  }
+  /* line 974, ../sass/style.scss */
+  #brands_section article {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+  }
+  /* line 979, ../sass/style.scss */
+  #brands_section article h2 a {
+    font-size: 32px;
+  }
+  /* line 983, ../sass/style.scss */
+  #brands_section article .brand_img a img {
+    width: 565px;
+    height: 530px;
+  }
+
+  /* line 992, ../sass/style.scss */
+  #banner {
+    left: -90px;
+  }
+  /* line 995, ../sass/style.scss */
+  #banner img {
+    width: 810px;
+  }
+
+  /* line 1000, ../sass/style.scss */
+  #breadcrumbs {
+    padding: 0 0 31px 3px;
+  }
+
+  /* line 1004, ../sass/style.scss */
+  aside {
+    width: 640px;
+    height: 62px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    overflow: hidden;
+    z-index: 999;
+  }
+  /* line 1013, ../sass/style.scss */
+  aside #brands_menu_container {
+    width: 570px;
+    height: 62px;
+    overflow: hidden;
+  }
+  /* line 1019, ../sass/style.scss */
+  aside ul#brands_menu {
+    border: 1px solid #efefef;
+    height: 62px;
+    position: relative;
+  }
+  /* line 1024, ../sass/style.scss */
+  aside ul#brands_menu li {
+    border-bottom: 1px solid #efefef;
+    /*width: 140px;*/
+    overflow: hidden;
+    float: left;
+    border-right: 1px solid #EFEFEF;
+    display: inline-block;
+    position: relative;
+  }
+  /* line 1034, ../sass/style.scss */
+  aside ul#brands_menu li:last-child {
+    border-bottom: none;
+  }
+  /* line 1038, ../sass/style.scss */
+  aside ul#brands_menu li a#brands_sublink {
+    text-transform: uppercase;
+  }
+  /* line 1042, ../sass/style.scss */
+  aside ul#brands_menu li a {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 30px;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Abel", sans-serif;
+    color: #222;
+    text-transform: capitalize;
+  }
+  /* line 1056, ../sass/style.scss */
+  aside ul#brands_menu li a:hover {
+    background-color: #efefef;
+  }
+  /* line 1061, ../sass/style.scss */
+  aside ul#brands_menu li:last-child {
+    border-bottom: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+  }
+  /* line 1068, ../sass/style.scss */
+  aside #arrow_more {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75px;
+    float: right;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+  }
+  /* line 1079, ../sass/style.scss */
+  aside #arrow_more a {
+    font-size: 60px;
+  }
+
+  /* line 1085, ../sass/style.scss */
+  #yasmina_section {
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    top: 80px;
+  }
+  /* line 1089, ../sass/style.scss */
+  #yasmina_section #tabs {
+    height: 33px;
+  }
+  /* line 1093, ../sass/style.scss */
+  #yasmina_section #overview {
+    width: 100%;
+  }
+  /* line 1096, ../sass/style.scss */
+  #yasmina_section #overview .brand_img img {
+    padding: 15px;
+    margin: 0 45px 45px 0;
+    width: 240px;
+    height: 160px;
+    background-color: #eee;
+  }
+  /* line 1104, ../sass/style.scss */
+  #yasmina_section #overview .brand_img img:nth-child(even) {
+    margin-right: 0px;
+  }
+  /* line 1110, ../sass/style.scss */
+  #yasmina_section #media_kit {
+    width: 100%;
+  }
+}

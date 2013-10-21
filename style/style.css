@@ -1,0 +1,62 @@
+/*
+Syntax error: Invalid CSS after ".container": expected "{", was "($width: $foote..."
+        on line 106 of /opt/lampp/htdocs/responsive_git/sass/style.scss
+
+Backtrace:
+/opt/lampp/htdocs/responsive_git/sass/style.scss:106
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/scss/parser.rb:1146:in `expected'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/scss/parser.rb:1084:in `expected'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/scss/parser.rb:1079:in `tok!'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/scss/parser.rb:533:in `block'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/scss/parser.rb:528:in `ruleset'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/scss/parser.rb:552:in `block_child'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/scss/parser.rb:545:in `block_contents'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/scss/parser.rb:82:in `stylesheet'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/scss/parser.rb:27:in `parse'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:342:in `_to_tree'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:315:in `_render'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:262:in `render'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block in run'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/bin/compass:44:in `call'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/bin/compass:23:in `load'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/bin/compass:23:in `<main>'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `eval'
+/home/diwanee35/.rvm/gems/ruby-2.0.0-p247/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \".container\": expected \"{\", was \"($width: $foote...\"\A         on line 106 of /opt/lampp/htdocs/responsive_git/sass/style.scss"; }

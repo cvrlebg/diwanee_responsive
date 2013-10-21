@@ -1,0 +1,1114 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+$helvetica-font: "Helvetica Neue",Arial,Helvetica,sans-serif;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+        background-color: #F3F3F3;
+        color: #222;
+        font-family: $helvetica-font;
+        font-size: 12px;
+        overflow-x: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+        color: #222;
+	&:active,
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+strong{
+    font-weight: bold;
+}
+
+body#home li#home_link a{
+    background: url('../img/home_sprite.png') -1px -24px no-repeat !important;
+    border-bottom: 1px solid #fff;
+}
+
+body#brands_body a#brands_link, body#yasmina_body a#brands_link{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+body#yasmina_body a#yasmina_link{
+    color: #fff;
+}
+
+$abel-font: 'Abel',sans-serif;
+
+$date-color: #808080;
+
+$footer-main-links: 18px;
+
+$main-menu-bck: #363636;
+
+$link-decoration: underline;
+$short-info: 270px;
+
+$footer-container-width: 950px;
+
+.content_text{
+    /*font-size: 12px;*/
+}
+
+@mixin sections{
+    width: 470px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+@mixin container($width: $footer-container-width, $overflow: hidden){
+    width: $width;
+    margin: 0 auto;
+    position: relative;
+    overflow: $overflow;
+}
+
+@mixin brand_img($width: 210px, $height: 202px){
+    padding: 10px;
+    background: #F3F3F3;
+    margin-bottom: 15px;    
+    line-height: 1;
+    width: $width;
+    height: $height;
+}
+
+#main_header{
+    background-color: #222;
+    width: 100%;
+    height: 645px;
+    overflow: hidden;
+    position: absolute;
+
+}
+
+#header_container{
+    @include container(980px, visible);
+
+    h1{
+        padding-top: 28px;
+    }
+}
+
+#main_nav{
+    padding-top: 15px;
+    margin-bottom: 1px;
+
+    ul{
+        list-style: none;
+
+        li{
+            display: inline-block;
+            height: 30px;
+            padding: 0 13px 0 13px;
+            margin: 0 0 0 0.4em;
+            position: relative;
+
+            &:hover{
+                background-color: $main-menu-bck;
+            }
+            
+            &:hover ul.sub_menu{
+                display: block;
+            }
+            
+            ul.sub_menu{
+                display: none;
+                background-color: $main-menu-bck;
+                position: absolute;
+                list-style: none;
+                width: 200px;
+                left: 0px;
+                top: 30px;
+                z-index: 999;
+
+                li{
+                    display: block;
+                    border-bottom: 1px solid #444;
+                    padding: 0 0 5px 0;
+                    margin: 0px 16px 0 16px;
+
+                    &:last-child{
+                        border: none;
+                    }
+
+                    a{
+                        text-transform: none;
+                    }
+                }
+
+                
+            }
+        }
+        
+        #home_link{
+            margin: 0 4px 0 0;
+            padding: 0;
+            background: url('../img/home_sprite.png') -1px 2px no-repeat;
+
+            a:hover{
+                background: url('../img/home_sprite.png') -1px -25px no-repeat;
+            }
+        }
+        
+        a {
+            font-size: 18px;
+            color: #b1b1b1;
+            text-decoration: none;
+            height: 29px;
+            line-height: 29px;
+            text-transform: uppercase;
+            font-family: $abel-font;
+            
+            &:hover{
+                color: #fff;
+            }
+       }
+           
+    }
+}
+
+//slider
+#slider{
+    width: 1262px;
+    height: 522px;
+    margin: 0 auto;
+
+    img{
+        height: 522px;
+    }
+}
+
+#empty_field{
+    height: 312px;
+}
+
+//main container
+#main_container{
+    @include sections;
+    position: relative;
+    background-color: #fff;
+    padding: 15px 15px 28px 15px;
+    position: relative;
+    background-color: #FFF;
+    z-index: 50;
+    overflow: hidden;
+    background: url('../img/footer-top-gradient.png') bottom left repeat-x #fff;
+}
+
+.section-head{
+    font-family: $abel-font;
+    font-size: 24px;
+    margin-bottom: 15px;
+    
+    img{
+        float: left;
+        margin-right: 10px;
+    }
+
+    h2{
+       line-height: 31px;
+       text-transform: uppercase;
+    }
+}
+
+//latest campaigns
+#latest_campaigns{
+    @include sections;
+    margin-right: 10px; 
+    height: 790px;
+
+    .short_info{
+        width: $short-info;
+        position: relative;
+        float: left;
+    }
+
+    article{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        
+        h2{
+            font-family: $abel-font;
+            margin-bottom: 10px;
+            line-height: 1;
+            
+            a{
+                color: #222;
+                font-size: 18px;
+                
+                &:hover{
+                    text-decoration: $link-decoration;
+                }
+            }
+        }
+        
+        p{
+            height: 40px;
+            //.content_text;
+            overflow: hidden;
+            font-size: inherit;
+        }
+
+        
+    }
+}
+
+.red_link{
+    color: #CF1414;
+
+    &:hover{
+        text-decoration: $link-decoration;
+    }
+}
+
+.section_footer{
+    height: 34px;
+    width: 100%;
+    background-color: #f2f2f2;
+    position: absolute;
+    bottom: 0px;
+
+    span{
+        margin: 4px 4px 0 4px;
+        height: 26px;
+        width: 144px;
+        position: relative;
+        float: right;
+
+        a.the_button{
+            line-height: 26px;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            background-color: #989697;
+            color: #FFF;
+            background: url('../img/button.gif') 0 -26px;
+
+            &:hover{
+                 background: url('../img/button.gif') 0 0px;
+            }
+        }
+    }
+}
+
+@mixin main_img_data($width: 190px){
+    width: $width;
+}
+
+.main_img{
+    @include main_img_data;
+    float: left;
+    text-align: center;
+}
+
+
+// news
+#news{
+    @include sections;
+    //.content_text;
+    margin-bottom: 18px;
+    line-height: 1.2;
+    height: 423px;
+
+    article{
+
+       &:last-child{
+            border: none;
+       }
+
+       h4{
+          width: 370px;
+          height: 30px;
+          float: left;
+       }
+
+       time{
+            color: $date-color;
+            float: right;
+       }
+    }
+}
+
+.news_twitter_article{
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0 12px 0 14px;
+    padding: 6px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+//twitter timeline
+#twitter_timeline{
+    @include sections;
+    //.content_text;
+    height: 349px;
+
+    .time{
+        color: $date-color;
+    }
+}
+
+//footer
+footer{
+    position: relative;
+}
+
+@mixin footer_parts($height: 144px, $background-color: #fff,$color: #222){
+    width: 100%;
+    height: $height;
+    position: relative;
+    background-color: $background-color;
+    color: $color;    
+}
+
+//brands
+#brands{
+    @include footer_parts($height: 144px, $background-color: #fff,$color: #222);
+
+    #brands_container{
+        @include sections;
+        padding: 15px;
+        overflow: hidden;
+
+        article{
+            float: left;
+            margin-right: 20px;
+        }
+    } 
+}
+
+
+
+//copyright
+#copyright{
+    @include footer_parts($height: 38px, $background-color: #222,$color: #ddd);
+    font-size: 11px;
+    
+
+    #copyright_container{
+        @include sections;
+
+        @mixin footer_parts($top: 10px){
+            position: relative;
+            top: $top;
+        }
+
+        #rights{ 
+            @include footer_parts($top: 10px);
+            float: left;
+        }
+
+        #connect_with{
+            @include footer_parts($top: 10px);
+            float: right;
+            margin-right: 5px;
+        }
+
+        #social_buttons{
+            @include footer_parts($top: 5px);
+            float: right;
+        }
+    }
+
+}
+
+//links
+#links{
+    @include footer_parts($height: 200px, $background-color: #B22C2D,$color: #fff);
+    border-top: 6px solid #8D120D;
+    
+    #links_container{
+        @include sections;
+        padding: 15px;
+        font-family: 'Abel',sans-serif;
+
+        ul.footer_menu li{
+            display: block;
+            width: 118px;
+            float: left;
+            position: relative;
+
+            a{
+                color: #fff;
+                text-transform: uppercase;
+                font-size: $footer-main-links;
+
+                &:hover{
+                    text-decoration: $link-decoration;
+                }
+            }
+
+            .sub_menu{ 
+                overflow: hidden;
+
+                li a{
+                    text-transform: capitalize;
+                    font-size: 14px;
+                
+                
+                    &:hover{
+                        text-decoration: $link-decoration;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+//page brands
+body#brands_body #brands_menu li a#brands_sublink, body#yasmina_body #brands_menu li a#yasmina_sublink{
+    background-color: #efefef;
+}
+
+aside{
+    width: 230px;
+    height: 100%;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+
+    ul#brands_menu{
+        border: 1px solid #efefef;
+
+        li{
+            
+            border-bottom: 1px solid #efefef;
+
+            &:last-child{
+                 border-bottom: none;
+            }
+
+            a#brands_sublink{
+                text-transform: uppercase;
+            }
+
+            a{
+                display: block;
+                width: 220px;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 10px;
+                font-size: 18px;
+                font-family: $abel-font;
+                color: #222;
+                text-transform: capitalize;
+
+                &:hover{
+                    background-color: #efefef;
+                }
+            }
+        }
+    }
+
+    #arrow_more{
+        display: none;
+    }
+}
+
+@mixin main_tile{
+    font-size: 36px;
+    text-transform: uppercase;
+    font-family: $abel-font;
+    margin-bottom: 25px;
+    line-height: 1;
+}
+
+@mixin right_section{
+    width: 710px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+#brands_section{
+    @include right_section;
+    
+    h1{
+        @include main_tile;
+    }
+
+    article{
+        height: 400px;
+        width: 230px;
+        float: left;
+        position: relative;
+        margin-right: 10px;
+
+        h2{
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-family: $abel-font;
+            
+            a{
+                color: #222;
+                
+                &:hover{
+                    text-decoration: $link-decoration;
+                }
+            }
+        }
+
+        img{
+            @include brand_img($width: 210px, $height: 202px);
+        }
+
+        p{
+            margin-bottom: 5px;
+        }
+    }
+}
+
+#breadcrumbs{
+    position: relative;
+    top: 0px;
+    padding: 0 0 11px 3px;
+    line-height: 1;
+}
+
+@mixin p_tag($margin-bottom: 15px){
+    margin-bottom: $margin-bottom;
+}
+
+//yasmina
+body#yasmina_body{
+    /*height: 1617px;*/
+}
+
+#banner{
+    width: 1280px;
+    margin: 0 auto;
+    position: absolute;
+    left: -150px;
+
+    img{
+        height: 522px;
+    }
+}
+
+#yasmina_section h1{
+    @include main_tile;
+}
+
+#yasmina_section{
+    @include right_section;
+}
+
+#tabs{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    height: 20px;
+
+    a{
+        border: 1px solid #CCC;
+        padding: 4px 17px 4px 12px;
+        margin-right: -2px;
+        color: #666;
+        background-color: #eee;
+        line-height: 1;
+    }
+}
+
+.lines{
+    @include p_tag($margin-bottom: 15px);
+}
+
+.small_line_height{
+    @include p_tag($margin-bottom: 0px);
+}
+
+#overview{
+    @include right_section;
+
+    img{
+        @include brand_img($width: 202px, $height: 138px);
+        margin: 5px;
+    }
+
+    .second_part p{
+        @include p_tag($margin-bottom: 0px);
+    }
+}
+
+.active{
+    border-bottom: 1px solid #fff !important;
+    background-color: #fff !important;
+    color: #222 !important;    
+}
+
+
+// RESPONSIVE
+
+@media only screen and (max-width: 640px) {
+
+    body {
+	line-height: 1.5;
+        font-size: 22px;
+    }
+
+    body#home li#home_link a{
+        background: url('../img/home_sprite.png') 7px -20px no-repeat !important;
+    }
+
+    $short-info: 320px;
+    $footer-container-width: 600px;
+    $footer-main-links: 30px;
+
+    #header_container{
+        @include container(630px);
+        padding-left: 10px;
+    }
+
+    #main_nav{
+    padding-top: 15px;
+
+    ul{
+        list-style: none;
+
+        li{
+            display: inline-block;
+            height: 30px;
+            padding: 0 13px 0 13px;
+            margin: 0 0 0 0.4em;
+            position: relative;
+
+            &:hover{
+                background-color: $main-menu-bck;
+            }
+            
+            &:hover ul.sub_menu{
+                display: block;
+            }
+            
+            ul.sub_menu{
+                display: none;
+                background-color: $main-menu-bck;
+                position: absolute;
+                list-style: none;
+                width: 230px; //menjano
+                left: 0px;
+                top: 30px;
+                z-index: 999;
+
+                li{
+                    display: block;
+                    border-bottom: 1px solid #444;
+                    padding: 0 0 5px 0;
+                    margin: 0px 16px 5px 16px; //margin-bottom
+
+                    &:last-child{
+                        border: none;
+                    }
+
+                    a{
+                        text-transform: none;
+                    }
+                }
+
+                
+            }
+        }
+        
+        #home_link{
+            margin: 0 4px 0 0;
+            padding: 0;
+            background: url('../img/home_sprite.png') 7px 2px no-repeat;
+
+            a:hover{
+                background: url('../img/home_sprite.png') 7px -20px no-repeat;
+            }
+        }
+        
+        a {
+            font-size: 28px; //velicina fonta
+            color: #b1b1b1;
+            text-decoration: none;
+            height: 29px;
+            line-height: 29px;
+            text-transform: uppercase;
+            font-family: $abel-font;
+            
+            &:hover{
+                color: #fff;
+            }
+       }
+           
+    }
+}    
+
+    .anythingSlider{
+        left: -90px !important;
+        #slider img{
+            width: 810px;
+        }
+    }
+
+    .anythingSlider-default .back {
+        left: 100px !important;
+    }
+
+    .anythingSlider-default .forward {
+        right: 550px !important;
+    }
+    
+
+    #main_container{
+        @include container(610px);
+        padding-bottom: 28px;
+    }
+    
+    .section-head{
+        font-size: 35px;
+        
+    }
+
+    .section_footer{
+        height: 65px;
+        line-height: 65px;
+        background-color: #eee;
+
+        span{
+            width: 245px;
+        }
+    }
+
+    #latest_campaigns{
+        height: 590px;
+        width: $footer-container-width;
+        margin-bottom: 18px;
+
+       article{ 
+            margin-bottom: 40px;
+       
+            .short_info{
+                width: $short-info;
+            }
+            
+            img{
+                width: 255px;
+                height: 160px;
+            }
+
+            h2 a{
+                font-size: 30px;
+            }
+        }
+    }
+
+    #news{
+       width: $footer-container-width;
+       height: 854px;
+
+       article h4{
+            height: 80px;
+        }
+        
+        time{
+            font-size: 18px;
+        }
+    }
+
+    #twitter_timeline{
+        width: $footer-container-width;
+        height: 625px;
+    }
+
+    .main_img{
+        @include main_img_data(279px);
+    }
+
+    footer{
+        widht: 640px;
+    }
+
+    #brands{ 
+        height: 230px;
+    
+        #brands_container{
+            @include container(640px);
+            padding-top: 45px;
+
+            .section-head{
+                margin-bottom: 45px;
+            }
+
+            article{
+                margin-right: 80px;
+                
+                &:last-child{
+                    margin-right: 10px;
+                }
+            }
+
+             
+        }
+    }
+
+    #copyright{ 
+        height: 75px;
+
+        #copyright_container{
+            @include container(640px);
+            font-size: 22px;
+            line-height: 73px;            
+
+            #rights{
+                display: none;
+            }
+
+            #connect_with{
+                float: left;
+                padding-left: 10px;
+                top: 0px;
+                margin-left: 100px;
+            }
+
+            #social_buttons{
+                float: right;
+                margin-right: 100px;
+                top: 9px;
+
+                a{
+                    margin-right: 20px;
+                        
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    #links{ 
+       height: 400px;
+        #links_container{
+            @include container(640px);   
+
+            ul.footer_menu li{
+                 width: 160px;
+
+                 a{
+                    font-size: 30px;
+                 }
+
+                 ul.sub_menu{
+                    margin-top: 25px;
+                    
+                    li{ 
+                        width: 150px;
+                        margin-bottom: 20px;
+
+                        a{
+                            font-size: 26px;
+                            line-height: 0.1 !important;
+                        }
+                    }
+                }
+            }                
+                
+        }
+    }
+
+
+
+    //brands
+
+    #brands_section{
+        @include container(600px);
+        top: 80px;
+
+        article{
+            width: 100%;
+            height: 100%;
+            margin-bottom: 40px;
+            
+            h2 a{
+                font-size: 32px;
+            }
+            
+            .brand_img a img{
+                width: 565px;
+                height: 530px;
+            }
+        }
+    }
+
+    //yasmina
+
+    #banner{
+        left: -90px;
+
+        img{
+            width: 810px;
+        }
+    }
+
+    #breadcrumbs{
+        padding: 0 0 31px 3px;
+    }
+
+    aside{
+        width: 640px;
+        height: 62px;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        overflow: hidden;
+        z-index: 999;
+        
+        #brands_menu_container{
+            width: 570px; 
+            height: 62px; 
+            overflow: hidden;
+        }
+
+        ul#brands_menu{
+            border: 1px solid #efefef;
+            height: 62px;
+            position: relative;
+
+            li{
+
+                border-bottom: 1px solid #efefef;
+                /*width: 140px;*/
+                overflow: hidden;
+                float: left;
+                border-right: 1px solid #EFEFEF;
+                display: inline-block;
+                position: relative;
+
+                &:last-child{
+                     border-bottom: none;
+                }
+
+                a#brands_sublink{
+                    text-transform: uppercase;
+                }
+
+                a{
+                    display: block;
+                    //width: 100%;
+                    height: 60px;
+                    line-height: 60px;
+                    padding: 0 30px;
+                    text-align: center;
+
+                    font-size: 35px;
+                    font-family: $abel-font;
+                    color: #222;
+                    text-transform: capitalize;
+                    
+
+                    &:hover{
+                        background-color: #efefef;
+                    }
+                }
+
+                &:last-child{
+                    border-bottom: 1px solid #efefef;
+                    border-right: 1px solid #efefef;
+                }
+            }
+        }
+
+        #arrow_more{
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 75px;
+            float: right;
+            height: 62px;
+            line-height: 62px;
+            text-align: center;
+
+            a{
+                font-size: 60px;
+            }
+        }
+    }
+
+    #yasmina_section{
+        @include container(600px);
+        top: 80px;
+
+        #tabs{
+            height: 33px;
+        }
+
+        #overview{
+            width: 100%;
+            
+            .brand_img img{
+                padding: 15px;
+                margin: 0 45px 45px 0;
+                width: 240px;
+                height: 160px;
+                background-color: #eee;
+                
+
+                &:nth-child(even){
+                    margin-right: 0px;
+                }
+            }
+        }
+
+        #media_kit{
+            width: 100%;
+        }
+    }
+}

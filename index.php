@@ -5,11 +5,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Diwanee | Diwanee Corp</title>
         <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet/less" href="style/style.less" />
+<!--        <link rel="stylesheet/less" href="style/style.less" />-->
+        <link rel="stylesheet/css" href="stylesheets/style.css" />
         <link rel="stylesheet/less" href="js/anything-slider/css/LESS/anythingslider.less" />
         <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="img/bpdiwanee_favicon.jpg" type="image/x-icon" />
-        <script src="js/less.js"></script>
+        <!--<script src="js/less.js"></script>-->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src='js/anything-slider/js/jquery.anythingslider.min.js'></script>
         <!--[if lt IE 9]>
