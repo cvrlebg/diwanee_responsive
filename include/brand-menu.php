@@ -6,7 +6,7 @@
             <li><a href="">3a2ilati</a></li>
             <li><a href="">Wikeez.Yasmina</a></li>
             <li><a href="">Mooda</a></li>
-            <li><a href="">Wayyana</a></li>
+            <li><a href="">Wayyana</a></li>  
         </ul>
     </div>
     <span id='arrow_more'><a href="#">></a></span>
