@@ -1,0 +1,448 @@
+<layout id="full" name="player4" skinPath="/content/uiconf/kaltura/kmc/appstudio/kdp3/falcon/skin/v3.6.13/KDP_Blue.swf"> 
+    <HBox id="topLevel" width="100%" height="100%"> 
+        <VBox id="player" width="100%" height="100%" styleName="black"> 
+            <Plugin id="kalturaMix" width="0%" height="0%" includeInLayout="false" loadingPolicy="onDemand"/> 
+            <Plugin id="statistics" width="0%" height="0%" includeInLayout="false"/> 
+            <Plugin id="akamaiMediaAnalytics" width="0%" height="0%" includeInLayout="false" asyncInit="true" swfPath="http://79423.analytics.edgesuite.net/csma/plugin/csma.swf" configPath="http://ma193-r.analytics.edgesuite.net/config/beacon-3431.xml" securedSwfPath="https://79423.analytics.edgekey.net/csma/plugin/csma.swf" securedConfigPath="https://ma193-r.analytics.edgekey.net/config/beacon-3900.xml"/> 
+            <Plugin id="relatedEntries" width="0%" height="0%" sourceType="automatic" autoPlay="false" automaticPlaylistId="_KDP_CTXPL" entryId="{mediaProxy.entry.id}" referenceIdsSourceData="{mediaProxy.entryMetadata.ReferenceIds}" playlistSourceData="" entryIdsSourceData="{mediaProxy.entryMetadata.EntryIds}" autoPlayDelay="10" selectRandomNext="false" itemClickAction="loadInPlayer" urlAddress="" jsFunc=""/> 
+            <Plugin id="fader" width="0%" height="0%" includeInLayout="false" target="{controllersVbox}" hoverTarget="{PlayerHolder}" duration="0.5" autoHide="true"/> 
+            <Canvas id="PlayerHolder" height="100%" width="100%" styleName="black"> 
+                <Video id="video" width="100%" height="100%"/> 
+                <VBox id="offlineMessageHolder" verticalAlign="middle" horizontalAlign="center" includeInLayout="false" width="100%" height="100%"> 
+                    <Spacer height="100%"/> 
+                    <Spacer height="100%"/> 
+                    <Label id="offlineMessage" styleName="offlineMessage" text="{mediaProxy.entry.offlineMessage}" visible="{mediaProxy.isOffline}" width="100%" height="30"/> 
+                    <Spacer height="100%"/> 
+                </VBox> 
+                <VBox id="generalPluginContainer" width="100%" height="100%"> 
+                    <Spacer id="contentPusher" height="85%"/> 
+                    <Spacer id="contentPusherBottom" height="30"/> 
+                </VBox> 
+                <Screens id="screensLayer" width="100%" height="100%" mouseOverTarget="{PlayerHolder}" styleName="clickThrough" startScreenId="startScreen" startScreenOverId="startScreen" pauseScreenOverId="pauseScreen" pauseScreenId="pauseScreen" playScreenOverId="playScreen" endScreenId="endScreen" endScreenOverId="endScreen"/> 
+                <Watermark id="watermark" width="100%" height="100%" watermarkPath="http://www.kaltura.com/content/uiconf/kaltura/kmc/appstudio/kdp3/exampleWatermark.png" watermarkClickPath="http://www.kaltura.com/" watermarkPosition="topRight" padding="5"/> 
+                <VBox id="relatedViewVBox" horizontalAlign="center" verticalAlign="middle" width="100%" height="100%" visible="{relatedView.visible}" includeInLayout="{relatedView.visible}" verticalGap="10" styleName="black" viewType="tile" showAfterPlayEnd="true"> 
+                    <VBox id="relatedVBox" width="100%" height="100%" maxWidth="800" maxHeight="600" paddingLeft="13" paddingRight="13" styleName="black" verticalAlign="bottom"> 
+                        <HBox id="upNextHbox" width="100%" height="35" paddingTop="10" horizontalGap="0" visible="{not(layoutProxy.isInFullScreen)}" includeInLayout="{not(layoutProxy.isInFullScreen)}"> 
+                            <Label id="upNextLabel" visible="{relatedEntries.autoPlay}" text="Up next in" width="63" height="20" styleName="Related_Text_UpNext"/> 
+                            <Label id="upNextTime" visible="{relatedEntries.autoPlay}" text="{relatedEntries.timeRemaining}" width="25" height="20" styleName="Related_Text_Number"/> 
+                            <Label id="upNextLabel2" visible="{relatedEntries.autoPlay}" text="secs" width="32" height="20" styleName="Related_Text_UpNext"/> 
+                            <HBox id="pauseConteinueHBox" width="63" height="20" visible="{relatedEntries.autoPlay}" paddingLeft="0" verticalAlign="middle"> 
+                                <Button id="pauseRelatedBtn" width="30" height="20" label="Pause" visible="{relatedEntries.isTimerRunning}" includeInLayout="{relatedEntries.isTimerRunning}" kClick="sendNotification('pauseResumeRelatedTimer')" buttonType="labelButton" color1="0xCECECE" color2="0xFFFFFF"/> 
+                                <Button id="playRelatedBtn" width="63" height="20" visible="{not(relatedEntries.isTimerRunning)}" includeInLayout="{not(relatedEntries.isTimerRunning)}" label="Continue" kClick="sendNotification('pauseResumeRelatedTimer')" buttonType="labelButton" color1="0xCECECE" color2="0xFFFFFF"/> 
+                            </HBox> 
+                            <HBox id="actionsHBox" width="100%" height="35" horizontalAlign="right" horizontalGap="5"> 
+                                <Button id="replayOnRelatedScreen" kClick="sendNotification('doSeek','0');sendNotification('doPlay')" label="Replay" labelPlacement="right" textPadding="5" minWidth="80" visible="{relatedView.showReplayBtn}" icon="replayIcon_Up" upIcon="replayIcon_Up" overIcon="replayIcon_Hover" downIcon="replayIcon_Down" disabeledIcon="replayIcon_Disabled"/> 
+                                <Button id="kalturaShareBtnOnRelatedAuto" visible="{and(relatedEntries.autoPlay,relatedEntries.isTimerRunning)}" includeInLayout="{kalturaShareBtnOnRelatedAuto.visible}" kClick="sendNotification ('pauseResumeRelatedTimer');sendNotification('showAdvancedShare')" textPadding="5" label="Share" labelPlacement="right" minWidth="80" icon="shareIcon_Up" upIcon="shareIcon_Up" overIcon="shareIcon_Hover" downIcon="shareIcon_Down" disabeledIcon="shareIcon_Disabled" k_buttonType="falconButtonIconControllerArea"/> 
+                                <Button id="kalturaShareBtnOnRelated" visible="{not(kalturaShareBtnOnRelatedAuto.visible)}" includeInLayout="{kalturaShareBtnOnRelated.visible}" kClick="sendNotification('showAdvancedShare')" label="Share" textPadding="5" labelPlacement="right" minWidth="80" icon="shareIcon_Up" upIcon="shareIcon_Up" overIcon="shareIcon_Hover" downIcon="shareIcon_Down" disabeledIcon="shareIcon_Disabled" k_buttonType="falconButtonIconControllerArea"/> 
+                            </HBox> 
+                        </HBox> 
+                        <HBox id="upNextHboxFS" width="100%" height="50" paddingTop="10" horizontalGap="0" visible="{layoutProxy.isInFullScreen}" includeInLayout="{layoutProxy.isInFullScreen}"> 
+                            <Label id="upNextLabelFS" visible="{relatedEntries.autoPlay}" text="Up next in {relatedEntries.timeRemaining} secs" width="135" height="20" styleName="RelatedFS_Text_UpNext"/> 
+                            <HBox width="85" height="20" visible="{relatedEntries.autoPlay}" paddingLeft="0" verticalAlign="middle"> 
+                                <Button id="pauseRelatedBtnFS" width="40" height="30" label="Pause" visible="{relatedEntries.isTimerRunning}" includeInLayout="{relatedEntries.isTimerRunning}" kClick="sendNotification('pauseResumeRelatedTimer')" buttonType="labelButton" color1="0xCECECE" color2="0xFFFFFF" styleName="FS"/> 
+                                <Button id="playRelatedBtnFS" width="85" height="30" visible="{not(relatedEntries.isTimerRunning)}" includeInLayout="{not(relatedEntries.isTimerRunning)}" label="Continue" kClick="sendNotification('pauseResumeRelatedTimer')" buttonType="labelButton" color1="0xCECECE" color2="0xFFFFFF" styleName="FS"/> 
+                            </HBox> 
+                            <HBox width="100%" height="50" horizontalAlign="right" horizontalGap="5"> 
+                                <Button id="replayOnRelatedScreenFS" kClick="sendNotification('doSeek','0');sendNotification('doPlay')" label="Replay" labelPlacement="right" textPadding="5" minWidth="80" visible="{relatedView.showReplayBtn}" icon="replayIcon_Up" upIcon="replayIcon_Up" overIcon="replayIcon_Hover" downIcon="replayIcon_Down" disabeledIcon="replayIcon_Disabled"/> 
+                                <Button id="kalturaShareBtnOnRelatedAutoFS" visible="{and(relatedEntries.autoPlay,relatedEntries.isTimerRunning)}" includeInLayout="{kalturaShareBtnOnRelatedAutoFS.visible}" kClick="sendNotification ('pauseResumeRelatedTimer');sendNotification('showAdvancedShare')" textPadding="5" label="Share" labelPlacement="right" minWidth="80" icon="shareIcon_Up" upIcon="shareIcon_Up" overIcon="shareIcon_Hover" downIcon="shareIcon_Down" disabeledIcon="shareIcon_Disabled" k_buttonType="falconButtonIconControllerArea"/> 
+                                <Button id="kalturaShareBtnOnRelatedFS" visible="{not(kalturaShareBtnOnRelatedAutoFS.visible)}" includeInLayout="{kalturaShareBtnOnRelatedFS.visible}" kClick="sendNotification('showAdvancedShare')" label="Share" textPadding="5" labelPlacement="right" minWidth="80" icon="shareIcon_Up" upIcon="shareIcon_Up" overIcon="shareIcon_Hover" downIcon="shareIcon_Down" disabeledIcon="shareIcon_Disabled" k_buttonType="falconButtonIconControllerArea"/> 
+                            </HBox> 
+                        </HBox> 
+                        <Spacer height="20"/> 
+                        <Plugin id="relatedView" visible="false" width="100%" height="100%" dataProvider="{relatedEntries.dataProvider}" itemRenderer="relatedViewItemRenderer" viewType="tile" showAfterPlayEnd="true"/> 
+                    </VBox> 
+                </VBox> 
+                <VBox id="controllersVbox" width="100%" height="100%" verticalAlign="Bottom"> 
+                    <Spacer id="controllerPusher" width="100%" height="100%"/> 
+                    <VBox id="ControllerScreenHolder" width="100%" height="80" verticalAlign="middle" styleName="Player_bg_hover"> 
+                        <HBox id="scrubberBox" width="100%" height="28" verticalAlign="middle" paddingRight="10" paddingLeft="10"> 
+                            <HBox id="scrubberContainer" visible="{mediaProxy.canSeek}" width="100%" height="28" horizontalGap="0" paddingRight="9" verticalAlign="middle"> 
+                                <Timer id="timerControllerScreen1" width="45" height="25" styleName="timerProgressLeft" format="mm:ss" timerType="forwards"/> 
+                                <Label id="timerControllerScreen1Label" text="/" width="10" height="25" color1="0xFFFFFF" dynamicColor="true" styleName="timerProgressRight" timerType="forwards"/> 
+                                <Timer id="timerControllerScreen2" width="45" height="25" styleName="timerProgressRight" format="mm:ss" timerType="total"/> 
+                                <VBox width="100%" height="28" paddingLeft="8" paddingRight="8" supportEnableGui="false"> 
+                                    <Scrubber id="scrubber" width="100%" height="100%"/> 
+                                </VBox> 
+                            </HBox> 
+                            <Button id="kalturaLogo" minWidth="50" kClick="navigate('http://www.kaltura.com')" styleName="controllerScreen" icon="kalturaLogo"/> 
+                        </HBox> 
+                        <HBox id="ControllerScreen" width="100%" height="100%" horizontalGap="15" paddingLeft="25" paddingBottom="8" paddingRight="25" verticalAlign="middle"> 
+                            <Button id="playBtnControllerScreen" width="20" height="30" command="play" icon="playIcon_up" overIcon="playIcon_Hover" downIcon="playIcon_Down" disabeledIcon="playIcon_Disabled" selectedUpIcon="pauseIcon_Up" selectedOverIcon="pauseIcon_Hover" selectedDownIcon="pauseIcon_Down" selectedDisabledIcon="pauseIcon_Disabled" k_buttonType="falconButtonIconControllerArea" buttonType="normal" font="Arial"/> 
+                            <HBox id="liveBtns" width="56" height="30" paddingRight="0" paddingLeft="0" visible="{mediaProxy.isLive}" includeInLayout="{mediaProxy.isLive}" verticalAlign="middle" horizontalAlign="center"> 
+                                <Button id="liveToggleStatus" toggle="true" color1="0xFF0000" color2="0xFF0000" upIcon="onAirIcon_Up" overIcon="onAirIcon_Hover" downIcon="onAirIcon_Down" disabeledIcon="onAirIcon_Disabled" selectedUpIcon="offlineIcon_up" selectedOverIcon="offlineIcon_Hover" selectedDownIcon="offlineIcon_Down" selectedDisabledIcon="offlineIcon_Disabled" visible="{not(mediaProxy.canSeek)}" includeInLayout="{not(mediaProxy.canSeek)}" isSelected="{mediaProxy.isOffline}" mouseEnable="false" useHandCursor=""/> 
+                                <Button id="goLiveBtn" buttonType="labelButton" textPadding="0" height="20" color1="0xCECECE" color2="0xFFFFFF" kClick="sendNotification('goLive')" visible="{mediaProxy.canSeek}" includeInLayout="{mediaProxy.canSeek}" label="Live" styleName="controllerScreen"/> 
+                            </HBox> 
+                            <Spacer id="buttonsPusher" width="100%"/> 
+                            <Button id="kalturaShareBtnControllerScreen" kClick="sendNotification('showAdvancedShare')" height="30" styleName="controllerScreen" icon="shareIcon_Up" overIcon="shareIcon_Hover" downIcon="shareIcon_Down" disabeledIcon="shareIcon_Disabled" k_buttonType="falconButtonIconControllerArea" uiconfId="" buttonType="normal" font="Arial"/> 
+                            <VolumeBar id="volumeBar" width="30" height="30" icon="VolumeIcon_Up" buttonUpSkin="VolumeIcon_Up" styleName="controllerScreen" buttonOverSkin="VolumeIcon_Hover" buttonDownSkin="VolumeIcon_Down" buttonDisabledSkin="VolumeIcon_Disabled" buttonSelectedUpSkin="MuteIcon_up" buttonSelectedOverSkin="MuteIcon_Hover" buttonSelectedDownSkin="MuteIcon_Down" buttonSelectedDisabledSkin="MuteIcon_Disabled" initialValue="1" forceInitialValue="false" font="Arial"/> 
+                            <Button id="fullScreenBtnControllerScreen" command="fullScreen" height="30" styleName="controllerScreen" allowDisable="false" icon="closeFullScreenIcon_Up" overIcon="closeFullScreenIcon_Hover" downIcon="closeFullScreenIcon_Down" disabeledIcon="closeFullScreenIcon_Disabled" selectedUpIcon="openFullScreenIcon_Up" selectedOverIcon="openFullScreenIcon_Hover" selectedDownIcon="openFullScreenIcon_Down" selectedDisabledIcon="openFullScreenIcon_Disabled" k_buttonType="falconButtonIconControllerArea" buttonType="normal" font="Arial"/> 
+                        </HBox> 
+                    </VBox> 
+                </VBox> 
+                <VBox id="skipBtnHolder" width="100%" height="100%"> 
+                    <Spacer height="100%"/> 
+                    <HBox width="100%" height="30"> 
+                        <Spacer width="100%"/> 
+                    </HBox> 
+                </VBox> 
+                <Plugin id="kalturaShare" uiconfId="8700151" width="100%" height="100%" via="" pubid=""/> 
+            </Canvas> 
+        </VBox> 
+    </HBox> 
+    <screens> 
+        <screen id="startScreen"> 
+            <VBox id="startContainer" width="100%" height="100%" verticalAlign="middle" horizontalAlign="center"> 
+                <Tile id="startTile" width="100%" verticalGap="10" verticalAlign="middle" horizontalAlign="center"> 
+                    <Button id="onVideoPlayBtnStartScreen" command="play" minWidth="80" minHeight="80" labelPlacement="bottom" textPadding="5" label="Play" styleName="onScreenBtn" upIcon="OnVideo_playIcon_Up" overIcon="OnVideo_playIcon_Hover" downIcon="OnVideo_playIcon_Down" disabeledIcon="OnVideo_playIcon_Disabled" k_buttonType="falconButtonIconControllerArea" buttonType="normal" font="Arial"/> 
+                    <Button id="kalturaShareBtnStartScreen" kClick="sendNotification('showAdvancedShare')" minWidth="80" minHeight="80" labelPlacement="bottom" textPadding="5" label="Share" styleName="onScreenBtn" icon="OnVideo_shareIcon_Up" upIcon="OnVideo_shareIcon_Up" overIcon="OnVideo_shareIcon_Hover" downIcon="OnVideo_shareIcon_Down" disabeledIcon="OnVideo_shareIcon_Disabled" k_buttonType="falconButtonIconControllerArea" uiconfId="" buttonType="normal" font="Arial"/> 
+                </Tile> 
+            </VBox> 
+        </screen> 
+        <screen id="pauseScreen"> 
+            <VBox id="pauseContainer" width="100%" height="100%" verticalAlign="middle" horizontalAlign="center"> 
+                <Tile id="pauseTile" width="100%" verticalGap="10" verticalAlign="middle" horizontalAlign="center"> 
+                    <Button id="onVideoPlayBtnPauseScreen" command="play" minWidth="80" minHeight="80" labelPlacement="bottom" textPadding="5" label="Play" styleName="onScreenBtn" upIcon="OnVideo_playIcon_Up" overIcon="OnVideo_playIcon_Hover" downIcon="OnVideo_playIcon_Down" disabeledIcon="OnVideo_playIcon_Disabled" k_buttonType="falconButtonIconControllerArea" buttonType="normal" font="Arial"/> 
+                    <Button id="kalturaShareBtnPauseScreen" kClick="sendNotification('showAdvancedShare')" minWidth="80" minHeight="80" labelPlacement="bottom" textPadding="5" label="Share" styleName="onScreenBtn" icon="OnVideo_shareIcon_Up" upIcon="OnVideo_shareIcon_Up" overIcon="OnVideo_shareIcon_Hover" downIcon="OnVideo_shareIcon_Down" disabeledIcon="OnVideo_shareIcon_Disabled" k_buttonType="falconButtonIconControllerArea" uiconfId="" buttonType="normal" font="Arial"/> 
+                </Tile> 
+            </VBox> 
+        </screen> 
+        <screen id="playScreen"> 
+            <VBox id="playContainer" width="100%" height="100%" verticalAlign="middle" horizontalAlign="center"> 
+                <Tile id="playTile" width="100%" verticalGap="10" verticalAlign="middle" horizontalAlign="center"/> 
+            </VBox> 
+        </screen> 
+        <screen id="endScreen"> 
+            <VBox id="endContainer" width="100%" height="100%" verticalAlign="middle" horizontalAlign="center"> 
+                <Tile id="endTile" width="100%" verticalGap="10" verticalAlign="middle" horizontalAlign="center"> 
+                    <Button id="replayBtnEndScreen" kClick="sendNotification('doPlay')" label="Replay" minWidth="80" minHeight="80" labelPlacement="bottom" textPadding="5" styleName="onScreenBtn" icon="OnVideo_replayIcon_Up" upIcon="OnVideo_replayIcon_Up" overIcon="OnVideo_replayIcon_Hover" downIcon="OnVideo_replayIcon_Down" disabeledIcon="OnVideo_replayIcon_Disabled" buttonType="normal" font="Arial"/> 
+                    <Button id="kalturaShareBtnEndScreen" kClick="sendNotification('showAdvancedShare')" minWidth="80" minHeight="80" labelPlacement="bottom" textPadding="5" label="Share" styleName="onScreenBtn" icon="OnVideo_shareIcon_Up" upIcon="OnVideo_shareIcon_Up" overIcon="OnVideo_shareIcon_Hover" downIcon="OnVideo_shareIcon_Down" disabeledIcon="OnVideo_shareIcon_Disabled" k_buttonType="falconButtonIconControllerArea" uiconfId="" buttonType="normal" font="Arial"/> 
+                </Tile> 
+            </VBox> 
+        </screen> 
+    </screens> 
+    <renderers> 
+        <renderer id="relatedViewItemRenderer" viewType="tile" showAfterPlayEnd="true"> 
+            <VBox id="relatedIR" width="100%" height="100%" verticalAlign="middle" horizontalAlign="center"> 
+                <Canvas id="relatedCanvas" styleName="black" width="100%" height="100%"> 
+                    <Image id="relatedImage" width="100%" height="100%" url="{this.entry.thumbnailUrl}/width/180/height/145/type/5"/> 
+                    <VBox id="relatedVBox" width="100%" height="100%" visible="{not(this.isOver)}" styleName="TileUp"/> 
+                    <VBox id="upNextVBox" width="100%" height="100%" visible="{this.isUpNext}" styleName="TileSelected"/> 
+                    <VBox id="labelsHolder" width="100%" height="100%" visible="{this.isOver}" styleName="TileSelected" paddingLeft="7" paddingRight="8" paddingTop="5" paddingBottom="5"> 
+                        <Text id="relatedHoverNameAndDesc" height="35" width="100%" text="{this.entry.name}" styleName="Tile_itemOver_Title"/> 
+                        <HBox id="durationHBox" width="100%" height="100%" verticalAlign="bottom"> 
+                            <Label id="relatedDurationIrScreen" height="15" width="40" text="{formatDate(this.entry.duration, 'NN:SS')}" styleName="Tile_itemOver_duration"/> 
+                            <Spacer width="100%"/> 
+                            <Button id="playIconBtn" icon="Tile_itemOver_icon"/> 
+                        </HBox> 
+                    </VBox> 
+                </Canvas> 
+            </VBox> 
+        </renderer> 
+    </renderers> 
+    <strings> 
+        <string key="ENTRY_CONVERTING" value="Entry is processing, please try again in a few minutes."/> 
+    </strings> 
+    <extraData>null</extraData> 
+    <plugins/> 
+    <uiVars> 
+        <var key="video.keepAspectRatio" value="true"/> 
+        <var key="playlistAPI.autoContinue" value="false"/> 
+        <var key="imageDefaultDuration" value="2"/> 
+        <var key="autoPlay" value="false"/> 
+        <var key="autoMute" value="false"/> 
+    </uiVars> 
+</layout>
+<snapshot fullPlayerId="20652502"> 
+    <featuresData> 
+        <feature k_fullName="watermark" k_value="true"/> 
+        <feature k_fullName="watermark.watermarkPath" k_value="http://www.kaltura.com/content/uiconf/kaltura/kmc/appstudio/kdp3/exampleWatermark.png"/> 
+        <feature k_fullName="watermark.watermarkClickPath" k_value="http://www.kaltura.com/"/> 
+        <feature k_fullName="watermark.watermarkPosition" k_value="topRight"/> 
+        <feature k_fullName="watermark.padding" k_value="5"/> 
+        <feature k_fullName="timerControllerScreen1" k_value="true"/> 
+        <feature k_fullName="timerControllerScreen1.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="timerControllerScreen1.timerType" k_value="forwards"/> 
+        <feature k_fullName="timerControllerScreen2" k_value="true"/> 
+        <feature k_fullName="timerControllerScreen2.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="timerControllerScreen2.timerType" k_value="total"/> 
+        <feature k_fullName="flavorComboControllerScreen" k_value="false"/> 
+        <feature k_fullName="flavorComboControllerScreen.hdOn" k_value="HD On"/> 
+        <feature k_fullName="flavorComboControllerScreen.hdOff" k_value="HD Off"/> 
+        <feature k_fullName="fullScreenBtn" k_value="true"/> 
+        <feature k_fullName="fullScreenBtn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="fullScreenBtn.showOnVideoControllers.StartScreen" k_value="false"/> 
+        <feature k_fullName="fullScreenBtn.showOnVideoControllers.PlayScreen" k_value="false"/> 
+        <feature k_fullName="fullScreenBtn.showOnVideoControllers.PauseScreen" k_value="false"/> 
+        <feature k_fullName="fullScreenBtn.showOnVideoControllers.EndScreen" k_value="false"/> 
+        <feature k_fullName="fullScreenBtn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="fullScreenBtn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="fullScreenBtn.Label" k_value="fullscreen"/> 
+        <feature k_fullName="onVideoPlayBtn" k_value="true"/> 
+        <feature k_fullName="onVideoPlayBtn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="onVideoPlayBtn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="onVideoPlayBtn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="onVideoPlayBtn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="onVideoPlayBtn.Label" k_value="Play"/> 
+        <feature k_fullName="playBtn" k_value="true"/> 
+        <feature k_fullName="playBtn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="playBtn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="volumeBar" k_value="true"/> 
+        <feature k_fullName="volumeBar.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="volumeBar.initialVolumeLevel" k_value="1"/> 
+        <feature k_fullName="volumeBar.volumeOverride" k_value="false"/> 
+        <feature k_fullName="scrubberContainer" k_value="true"/> 
+        <feature k_fullName="scrubberContainer.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="replayBtn" k_value="true"/> 
+        <feature k_fullName="replayBtn.EndScreen" k_value="true"/> 
+        <feature k_fullName="replayBtn.Label" k_value="Replay"/> 
+        <feature k_fullName="unmuteBtn" k_value="false"/> 
+        <feature k_fullName="unmuteBtn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="unmuteBtn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="unmuteBtn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="unmuteBtn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="unmuteBtn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="unmuteBtn.Label" k_value="unmute"/> 
+        <feature k_fullName="kalturaShareBtn" k_value="true"/> 
+        <feature k_fullName="kalturaShareBtn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="kalturaShareBtn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="kalturaShareBtn.showOnVideoControllers.PlayScreen" k_value="false"/> 
+        <feature k_fullName="kalturaShareBtn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="kalturaShareBtn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="kalturaShareBtn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="kalturaShareBtn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="kalturaShareBtn.Label" k_value="Share"/> 
+        <feature k_fullName="kalturaShareBtn.uiconfId" k_value="8700151"/> 
+        <feature k_fullName="kalturaShareBtn.via" k_value=""/> 
+        <feature k_fullName="kalturaShareBtn.pubid" k_value=""/> 
+        <feature k_fullName="downloadBtn" k_value="false"/> 
+        <feature k_fullName="downloadBtn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="downloadBtn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="downloadBtn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="downloadBtn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="downloadBtn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="downloadBtn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="downloadBtn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="downloadBtn.Label" k_value="Download"/> 
+        <feature k_fullName="downloadBtn.flavor" k_value=""/> 
+        <feature k_fullName="uploadBtn" k_value="false"/> 
+        <feature k_fullName="uploadBtn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="uploadBtn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="uploadBtn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="uploadBtn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="uploadBtn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="uploadBtn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="uploadBtn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="uploadBtn.Label" k_value="upload"/> 
+        <feature k_fullName="captureThumbBtn" k_value="false"/> 
+        <feature k_fullName="captureThumbBtn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="captureThumbBtn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="captureThumbBtn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="captureThumbBtn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="captureThumbBtn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="captureThumbBtn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="captureThumbBtn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="captureThumbBtn.Label" k_value="Thumb"/> 
+        <feature k_fullName="flagBtn" k_value="false"/> 
+        <feature k_fullName="flagBtn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="flagBtn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="flagBtn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="flagBtn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="flagBtn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="flagBtn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="flagBtn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="flagBtn.Label" k_value="flag"/> 
+        <feature k_fullName="relatedView" k_value="true"/> 
+        <feature k_fullName="relatedView.relatedViewType" k_value="tile"/> 
+        <feature k_fullName="relatedView.relatedViewSource" k_value="automatic"/> 
+        <feature k_fullName="relatedView.autoPlaylistId" k_value="_KDP_CTXPL"/> 
+        <feature k_fullName="relatedView.relatedReferenceIds" k_value="{mediaProxy.entryMetadata.ReferenceIds}"/> 
+        <feature k_fullName="relatedView.relatedGlobalPlaylist" k_value=""/> 
+        <feature k_fullName="relatedView.relatedEntryIds" k_value="{mediaProxy.entryMetadata.EntryIds}"/> 
+        <feature k_fullName="relatedView.relatedViewWhen" k_value="true"/> 
+        <feature k_fullName="relatedView.relatedViewAuto" k_value="false"/> 
+        <feature k_fullName="relatedView.autoPlayDelay" k_value="10"/> 
+        <feature k_fullName="relatedView.relatedNext" k_value="false"/> 
+        <feature k_fullName="relatedView.relatedAction" k_value="loadInPlayer"/> 
+        <feature k_fullName="relatedView.relatedUrlPattern" k_value=""/> 
+        <feature k_fullName="relatedView.relatedJSFunc" k_value=""/> 
+        <feature k_fullName="plymedia" k_value="false"/> 
+        <feature k_fullName="ccOverComboBoxWrapper" k_value="false"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.fontColor" k_value="0xFFFFFF"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.ccOverRG" k_value="true"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.ccOverGlowRB" k_value="true"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.ccOverGlowColor" k_value="0x000333"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.ccOverGlowBlur" k_value="4"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.ccOverBgRB" k_value="false"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.bgColor" k_value="0x000000"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.fontsize" k_value="12"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.fontFamily" k_value="Arial"/> 
+        <feature k_fullName="ccOverComboBoxWrapper.ccOverPrompt" k_value="Captions"/> 
+        <feature k_fullName="ccUnderComboBox" k_value="false"/> 
+        <feature k_fullName="ccUnderComboBox.fontColor" k_value="0xFFFFFF"/> 
+        <feature k_fullName="ccUnderComboBox.ccUnderRG" k_value="true"/> 
+        <feature k_fullName="ccUnderComboBox.ccUnderGlowRB" k_value="true"/> 
+        <feature k_fullName="ccUnderComboBox.ccUnderGlowColor" k_value="0x000333"/> 
+        <feature k_fullName="ccUnderComboBox.ccUnderGlowBlur" k_value="4"/> 
+        <feature k_fullName="ccUnderComboBox.ccUnderBgRB" k_value="false"/> 
+        <feature k_fullName="ccUnderComboBox.bgColor" k_value="0x000000"/> 
+        <feature k_fullName="ccUnderComboBox.fontsize" k_value="12"/> 
+        <feature k_fullName="ccUnderComboBox.fontFamily" k_value="Arial"/> 
+        <feature k_fullName="ccUnderComboBox.ccUnderPrompt" k_value="Captions"/> 
+        <feature k_fullName="widevine" k_value="false"/> 
+        <feature k_fullName="googleAnalytics" k_value="false"/> 
+        <feature k_fullName="googleAnalytics.urchinCode" k_value=""/> 
+        <feature k_fullName="googleAnalytics.trackEventMonitor" k_value=""/> 
+        <feature k_fullName="googleAnalytics.customEvents" k_value="doPlay,doPause,playerPlayEnd"/> 
+        <feature k_fullName="googleAnalytics.doPlayCategory" k_value=""/> 
+        <feature k_fullName="googleAnalytics.doPlayAction" k_value=""/> 
+        <feature k_fullName="googleAnalytics.doPlayValue" k_value=""/> 
+        <feature k_fullName="googleAnalytics.doPauseCategory" k_value=""/> 
+        <feature k_fullName="googleAnalytics.doPauseAction" k_value=""/> 
+        <feature k_fullName="googleAnalytics.doPauseValue" k_value=""/> 
+        <feature k_fullName="googleAnalytics.playerPlayEndCategory" k_value=""/> 
+        <feature k_fullName="googleAnalytics.playerPlayEndAction" k_value=""/> 
+        <feature k_fullName="googleAnalytics.playerPlayEndValue" k_value=""/> 
+        <feature k_fullName="akamaiMediaAnalytics" k_value="true"/> 
+        <feature k_fullName="omnitureOnPage" k_value="false"/> 
+        <feature k_fullName="omnitureOnPage.s_codeUrl" k_value=""/> 
+        <feature k_fullName="omnitureOnPage.trackEventMonitor" k_value=""/> 
+        <feature k_fullName="custom1Btn" k_value="false"/> 
+        <feature k_fullName="custom1Btn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="custom1Btn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="custom1Btn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="custom1Btn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="custom1Btn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="custom1Btn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="custom1Btn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="custom1Btn.Label" k_value="custom1"/> 
+        <feature k_fullName="custom2Btn" k_value="false"/> 
+        <feature k_fullName="custom2Btn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="custom2Btn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="custom2Btn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="custom2Btn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="custom2Btn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="custom2Btn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="custom2Btn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="custom2Btn.Label" k_value="custom2"/> 
+        <feature k_fullName="custom3Btn" k_value="false"/> 
+        <feature k_fullName="custom3Btn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="custom3Btn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="custom3Btn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="custom3Btn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="custom3Btn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="custom3Btn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="custom3Btn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="custom3Btn.Label" k_value="custom3"/> 
+        <feature k_fullName="custom4Btn" k_value="false"/> 
+        <feature k_fullName="custom4Btn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="custom4Btn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="custom4Btn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="custom4Btn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="custom4Btn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="custom4Btn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="custom4Btn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="custom4Btn.Label" k_value="custom4"/> 
+        <feature k_fullName="custom5Btn" k_value="false"/> 
+        <feature k_fullName="custom5Btn.showOnVideoControllers" k_value="true"/> 
+        <feature k_fullName="custom5Btn.showOnVideoControllers.StartScreen" k_value="true"/> 
+        <feature k_fullName="custom5Btn.showOnVideoControllers.PlayScreen" k_value="true"/> 
+        <feature k_fullName="custom5Btn.showOnVideoControllers.PauseScreen" k_value="true"/> 
+        <feature k_fullName="custom5Btn.showOnVideoControllers.EndScreen" k_value="true"/> 
+        <feature k_fullName="custom5Btn.ControllerScreen" k_value="true"/> 
+        <feature k_fullName="custom5Btn.Display" k_value="falconButtonIconControllerArea"/> 
+        <feature k_fullName="custom5Btn.Label" k_value="custom5"/> 
+    </featuresData> 
+    <advertising enabled="false"> 
+        <adSources> 
+            <source id="bumperOnly" label="Bumper Only" url="no url"/> 
+            <source id="customSwf" label="Custom swf" url="http://"/> 
+            <source id="tremor" label="Tremor" url="tremorPlugin.swf" classId="tremor"/> 
+            <source id="adaptv" label="AdapTV" url="adaptvas3Plugin.swf" classId="adaptv" selected="true"/> 
+            <source id="eyewonder" label="Eye Wonder" url="eyewonderPlugin.swf" classId="eyewonder"/> 
+            <source id="freeWheel" label="FreeWheel" url="freeWheelPlugin.swf" classId="freeWheel" asyncInit="true"/> 
+            <source id="doubleClick" label="DoubleClick" url="doubleclickPlugin.swf" classId="doubleClick" adTagUrl="Enter Ad Tag"/> 
+            <source id="vastAdServer" label="VAST Ad Server" url="http://"/> 
+        </adSources> 
+        <playerConfig timeout="4" trackCuePoints="false"> 
+            <notice enabled="true">Video will start in {sequenceProxy.timeRemaining} seconds</notice> 
+            <skip enabled="true" label="skip ad >"/> 
+            <companion> 
+                <elements> 
+                    <element elementid="Controls" relativeTo="controlsHolder" position="lastChild"/> 
+                    <element elementid="Custom" relativeTo="" position=""/> 
+                </elements> 
+            </companion> 
+        </playerConfig> 
+        <timeline> 
+            <preroll enabled="false" nads="1" frequency="1" start="1" url=""/> 
+            <bumper enabled="false"/> 
+            <postroll enabled="false" nads="1" frequency="1" start="1" url=""/> 
+            <overlay enabled="false" nads="5" frequency="180" start="120" url=""/> 
+            <values> 
+                <nads> 
+                    <item data="1" label="1"/> 
+                    <item data="2" label="2"/> 
+                    <item data="3" label="3"/> 
+                    <item data="4" label="4"/> 
+                    <item data="5" label="5"/> 
+                    <item data="6" label="6"/> 
+                    <item data="7" label="7"/> 
+                    <item data="8" label="8"/> 
+                    <item data="9" label="9"/> 
+                    <item data="10" label="10"/> 
+                </nads> 
+                <frequency> 
+                    <item data="1" label="1st"/> 
+                    <item data="2" label="2nd"/> 
+                    <item data="3" label="3rd"/> 
+                    <item data="4" label="4th"/> 
+                    <item data="5" label="5th"/> 
+                    <item data="6" label="6th"/> 
+                    <item data="7" label="7th"/> 
+                    <item data="8" label="8th"/> 
+                    <item data="9" label="9th"/> 
+                    <item data="10" label="10th"/> 
+                </frequency> 
+                <start> 
+                    <item data="1" label="1st"/> 
+                    <item data="2" label="2nd"/> 
+                    <item data="3" label="3rd"/> 
+                    <item data="4" label="4th"/> 
+                    <item data="5" label="5th"/> 
+                    <item data="6" label="6th"/> 
+                    <item data="7" label="7th"/> 
+                    <item data="8" label="8th"/> 
+                    <item data="9" label="9th"/> 
+                    <item data="10" label="10th"/> 
+                </start> 
+            </values> 
+        </timeline> 
+    </advertising> 
+    <screenAssets> 
+        <player ratio="4:3"/> 
+        <fixedAdditional left="0" right="0" top="0" bottom="0"/> 
+    </screenAssets> 
+    <visual> 
+        <theme id="blue" name="Blue"> 
+            <themeSkinPath>/content/uiconf/kaltura/kmc/appstudio/kdp3/falcon/skin/v3.6.13/KDP_Blue.swf</themeSkinPath> 
+            <color1>2147483647</color1> 
+            <color2>2147483647</color2> 
+            <color3>2147483647</color3> 
+            <color4>2147483647</color4> 
+            <color5>2147483647</color5> 
+            <font>Arial</font> 
+        </theme> 
+    </visual> 
+    <playerProperties> 
+        <width>560</width> 
+        <height>315</height> 
+        <theme>blue</theme> 
+    </playerProperties> 
+    <uiVars> 
+        <var key="video.keepAspectRatio" value="true"/> 
+        <var key="playlistAPI.autoContinue" value="false"/> 
+        <var key="imageDefaultDuration" value="2"/> 
+        <var key="autoPlay" value="false"/> 
+        <var key="autoMute" value="false"/> 
+    </uiVars> 
+</snapshot>

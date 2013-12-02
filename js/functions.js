@@ -35,15 +35,12 @@ var brand_menu_style = function(e){
     if(window_width < '640'){
         $.each($('#brands_menu li'), function(key, value){
             ul_width += $(this).outerWidth(true);  
-            console.log('key '+key+' width '+$(this).outerWidth(true));
+           
         });
         
         //console.log('ul_widht '+ul_width);
         
         var parent = $('#brands_menu').parent().width();
-              
-        
-        //console.log('ul_width '+ul_width);
 
         $('#brands_menu').css('width', ul_width);
         
@@ -63,8 +60,6 @@ var brand_menu_style = function(e){
             } else{
                 diff = parseInt(ul_width) - parseInt(position) - parseInt(parent);
             }
-
-            //console.log('diff '+diff);
 
             if(position === ''){
                 left = parent;
